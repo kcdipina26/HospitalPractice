@@ -12,23 +12,23 @@ Heart rate between 60 and 99 → print "Normal - routine checkup"
 Below 60 → print "Low - possible bradycardia, doctor review needed"
 
   */
-//  int ptHeartRate = 130;
-//  // Declared & assigned ptHeartRate variable even though BPM is whole no to be cautions gave it a variable
-//     if (ptHeartRate > 120) {
-//         System.out.println("Critical Immediate attention required");
-//
-//     } else if (ptHeartRate > 100 && ptHeartRate <=120 ) {
-//         System.out.println("High priority patient to be seen within 30 minutes of arrival");
-//
-//     } else if (ptHeartRate >=60 && ptHeartRate <=99) {
-//         System.out.println("Normal routine checkup");
-//
-//        } else if (ptHeartRate < 60) {
-//         System.out.println("Low possible bradycardia doctor review needed");
-//        } else  {
-//         System.out.println("Value needs to be input to evaluate the patient heart rate criteria");
-//
-//        }
+  int ptHeartRate = 119;
+  // Declared & assigned ptHeartRate variable even though BPM is whole no to be cautions gave it a variable
+     if (ptHeartRate > 120) {                              //always put some critical case upfront for the program to catch
+         System.out.println("Critical Immediate attention required");
+
+     } else if (ptHeartRate > 100 && ptHeartRate <=120 ) {
+         System.out.println("High priority patient to be seen within 30 minutes of arrival");
+
+     } else if (ptHeartRate >=60 && ptHeartRate <=99) {
+         System.out.println("Normal routine checkup");
+
+        } else if (ptHeartRate < 60) {
+         System.out.println("Low possible bradycardia doctor review needed");
+        } else  {
+         System.out.println("Value needs to be input to evaluate the patient heart rate criteria");
+
+        }
 
 
 
@@ -41,7 +41,7 @@ Bill between 20000 and 50000 → print "Eligible for 10% payment plan"
 Bill between 5000 and 19999 → print "Standard payment due"
 Below 5000 → print "Full payment due at checkout"
          */
-        int totalBillAmount = 21000;
+        int totalBillAmount = 60;
 
         if (totalBillAmount > 50000) {
             System.out.println("Eligible for 20% financial aid");
