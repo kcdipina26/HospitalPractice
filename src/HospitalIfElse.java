@@ -55,5 +55,24 @@ Below 5000 → print "Full payment due at checkout"
         } else {
             System.out.println("Please check with the cashier if you qualify for a discount");
         }
+
+   /*
+   More Practice if/else
+   Question 1: A patient temp below 96 is hypothermia risk, 96-99 normal and 99-103 is fever and above  103 is critical fever.
+    */
+        int ptBodyTemp = 99;
+        //If and else if condition: Remember what is most critical condition goes first
+        if (ptBodyTemp > 103) {
+            System.out.println("Patient has critical fever");
+
+        } else if (ptBodyTemp >99 && ptBodyTemp <= 103) {
+            System.out.println("Patient has a fever");
+        } else if (ptBodyTemp < 96) {
+            System.out.println("Patient is hypothermia risk");
+        } else if (ptBodyTemp >= 96 && ptBodyTemp <= 99) {
+            System.out.println("Patient Body Temperature is Normal");
+        } else {
+            System.out.println("Please take patient's temperature again");
+        }
     }
 }

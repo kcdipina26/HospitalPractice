@@ -26,6 +26,12 @@ public class Hospital {
         boolean isIcuRoomFull = true;            //declared & assigned ICU room is available or not condition for boolean
         double ptBloodO2LevelPercentage = 100;  //declared & assigned patient blood oxygen percentage, double for precision
         int maxNoOfSurgeriesPerDay = 26;          //declared & assigned max no of surgeries allowed per day whole no for int
+
+    /*
+    Data Types and Variable Practice
+
+
+     */
 /*
 Lesson 2 Simple If/Else for Hospital Billing System
 Question 1: If a patient's age is over 65 print "Qualifies for senior discount" otherwise "Full payment required"
