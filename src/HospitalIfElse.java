@@ -74,5 +74,36 @@ Below 5000 → print "Full payment due at checkout"
         } else {
             System.out.println("Please take patient's temperature again");
         }
+        /*
+        Question 2: A nurse's years of experience: above 10 → "Senior nurse", 5-10 → "Mid level nurse", 1-4 → "Junior nurse", 0 → "In training"
+         */
+        int nurseExperienceInYrs = 6;
+
+        if (nurseExperienceInYrs > 10) {
+            System.out.println("Nurse is a senior by experience");
+
+        } else if (nurseExperienceInYrs >=5 && nurseExperienceInYrs <= 10) {
+            System.out.println("Nurse is a mid-level by experience");
+        } else if (nurseExperienceInYrs >=1 && nurseExperienceInYrs <= 4) {
+            System.out.println("Nurse is junior by experience");
+        } else if (nurseExperienceInYrs < 1) {
+            System.out.println("Nurse is in training due to no prior experience");
+        }
+     /*
+     Question 3: Patient wait time in minutes: above 120 → "Critical wait time, escalate", 60-120 → "Long wait, notify supervisor",
+      30-59 → "Moderate wait", below 30 → "Acceptable wait time"
+      */
+        int ptWaitTimeBymin = 30;
+        if (ptWaitTimeBymin > 120) {
+            System.out.println("Critical wait time, please escalate");
+        } else if (ptWaitTimeBymin >= 60 &&  ptWaitTimeBymin <= 120) {
+            System.out.println("Long wait time, notify attending supervisor");
+        } else if (ptWaitTimeBymin >=30 && ptWaitTimeBymin <=59) {
+            System.out.println("Moderate wait time");
+        } else if (ptWaitTimeBymin < 30) {
+            System.out.println("Acceptable wait time");
+        } else {
+            System.out.println("Please put in acceptable wait time in minutes");
+        }
     }
 }
