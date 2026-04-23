@@ -179,6 +179,26 @@ Below 5000 → print "Full payment due at checkout"
    } else {
        System.out.println("Please check with the insurance and input the valid dollar amount");
    }
+ /*
+   If cat has food in bowl
+  If feeder is also on - turn it off, bowl is full enough
+  If feeder is off - cat can eat normally
+   If cat has no food in bowl
+   Turn feeder on
+  */
+  boolean catHasFood = true;
+  boolean catFeeder = false;
+
+  if (catHasFood) {
+      if (catFeeder) {
+          System.out.println("If feeder is also on- turn it off, bowl is full enough");
+      } else {
+          System.out.println("If feeder is off- cat can eat normally");
+          }
+      } else {
+        System.out.println("If cat has no food in the bowl turn feeder on");
+      }
+
 
     }
 }
