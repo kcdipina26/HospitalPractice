@@ -143,8 +143,8 @@ Below 5000 → print "Full payment due at checkout"
         }
 
   /*
-  Question 5: Insurance claim amount: above 100_00_0 → "Requires executive approval",
-  500_00-100_0_00 → "Requires manager approval", 100_00-49_99_9 → "Standard approval", below 100_00 → "Auto approved"
+     Question 5: Insurance claim amount: above 100_00_0 → "Requires executive approval",
+       500_00-100_0_00 → "Requires manager approval", 100_00-49_99_9 → "Standard approval", below 100_00 → "Auto approved"
      */
 
         //Assign double value to the InsuranceClaim variable, since it is about money its always better to pick a double data type.
@@ -156,29 +156,32 @@ Below 5000 → print "Full payment due at checkout"
         if (insuranceClaimInDollar < 0.00) {
             System.out.println("Invalid number please check and input valid number");
 
-        // If condition for insurance claim needing executive approval
+            // If condition for insurance claim needing executive approval
 
-    } else if (insuranceClaimInDollar > 10_00_0.00) {
-       System.out.println("Requires executive approval");
+        } else if (insuranceClaimInDollar > 10_00_0.00) {
+            System.out.println("Requires executive approval");
 
-       // Else if condition for manager approval
+            // Else if condition for manager approval
 
-   } else if (insuranceClaimInDollar <= 100_0_00.00 && insuranceClaimInDollar >= 500_00.00 ) {
-       System.out.println("Requires manager approval");
+        } else if (insuranceClaimInDollar <= 100_0_00.00 && insuranceClaimInDollar >= 500_00.00) {
+            System.out.println("Requires manager approval");
 
- // Else if condition for insurance claim with standard approval
+            // Else if condition for insurance claim with standard approval
 
-   } else if (insuranceClaimInDollar <= 49_99_9.00 && insuranceClaimInDollar >= 100_00.00) {
-       System.out.println("Standard approval");
+        } else if (insuranceClaimInDollar <= 49_99_9.00 && insuranceClaimInDollar >= 100_00.00) {
+            System.out.println("Standard approval");
 
-       // Else if condition for insurance claim for auto approval
+            // Else if condition for insurance claim for auto approval
 
-   } else if (insuranceClaimInDollar <= 10000.00) {
-       System.out.println("Auto Approved");
-// Else condition for any other insurance claim , note right now this program only handles positive values.
-   } else {
-       System.out.println("Please check with the insurance and input the valid dollar amount");
-   }
+        } else if (insuranceClaimInDollar <= 10000.00) {
+            System.out.println("Auto Approved");
+            // Else condition for any other insurance claim , note right now this program only handles positive values.
+        } else {
+            System.out.println("Please check with the insurance and input the valid dollar amount");
+        }
+
+        //Nested if else statements practice for the hospital billing system project
+
  /*
    If cat has food in bowl
   If feeder is also on - turn it off, bowl is full enough
@@ -186,19 +189,50 @@ Below 5000 → print "Full payment due at checkout"
    If cat has no food in bowl
    Turn feeder on
   */
-  boolean catHasFood = true;
-  boolean catFeeder = false;
 
-  if (catHasFood) {
-      if (catFeeder) {
-          System.out.println("If feeder is also on- turn it off, bowl is full enough");
-      } else {
-          System.out.println("If feeder is off- cat can eat normally");
-          }
-      } else {
-        System.out.println("If cat has no food in the bowl turn feeder on");
-      }
+        boolean catHasFood = false;
+        boolean catFeeder = true;
 
+        if (catHasFood) {
+            if (catFeeder) {
+                System.out.println("If feeder is also on- turn it off, bowl is full enough");
+            } else {
+                System.out.println("If feeder is off- cat can eat normally");
+            }
+        } else {
+            System.out.println("If cat has no food in the bowl turn feeder on");
+        }
+/*
+ Question 6: A patient arrives at the hospital. First check if the hospital is open. If the hospital is open, then check if the patient has valid ID. If thet have valid ID
+ print "Patient can be admitted". If no valid ID print "ID required before admission". If hospital is not open print "Hospital is closed please visit tomorrow."
+ */
 
+        boolean isHospitalOpen = false;
+        boolean hasValidId = false;
+        if (isHospitalOpen) {
+            if (hasValidId) {
+                System.out.println("Patient can be admitted");
+            } else {
+                System.out.println("ID required before admission");
+            }
+        } else {
+          System.out.println("Hospital is closed for the day please visit tomorrow");
+        }
+ /*
+  Question 7: Nurse overtime: First check if a nurse is on duty, check if she has worked more than 8 hours. If yes print "Nurse eligible for overtime pay."
+  If no print "Nurse on regular hours." If nurse is not on duty print "Nurse is off today".
+  */
+        boolean isNurseOnDuty = true;
+        int workHrs = 18;
+
+        if(isNurseOnDuty) {
+            if (workHrs > 8) {
+                System.out.println("Nurse eligible for overtime pay");
+            } else {
+                System.out.println("Nurse on regular pay hours");
+            }
+        } else {
+            System.out.println("Nurse is off today");
+        }
     }
 }
