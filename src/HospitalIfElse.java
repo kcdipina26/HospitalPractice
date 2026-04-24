@@ -218,7 +218,7 @@ Below 5000 → print "Full payment due at checkout"
                 System.out.println("ID required before admission");    //output if doesnot have valid id
             }
         } else {                                    // else condition when hospital is not open our else condition
-          System.out.println("Hospital is closed for the day please visit tomorrow"); // output when hospital is closed
+            System.out.println("Hospital is closed for the day please visit tomorrow"); // output when hospital is closed
         }
  /*
   Question 7: Nurse overtime: First check if a nurse is on duty, check if she has worked more than 8 hours. If yes print "Nurse eligible for overtime pay."
@@ -227,7 +227,7 @@ Below 5000 → print "Full payment due at checkout"
         boolean isNurseOnDuty = true;           //assigned a variable isnurseonduty a boolean datatype because nurse is either working or not working.
         int workHrs = 18;                      // assigned a variable workhours a integer datatype
 
-        if(isNurseOnDuty) {                  // if nurseisonduty check nested if/else condition for hours are > 8 or 8 hrs to check for overtime
+        if (isNurseOnDuty) {                  // if nurseisonduty check nested if/else condition for hours are > 8 or 8 hrs to check for overtime
             if (workHrs > 8) {
                 System.out.println("Nurse eligible for overtime pay");     // output if nurse works overtime
             } else {
@@ -236,5 +236,41 @@ Below 5000 → print "Full payment due at checkout"
         } else {                                                 // else condition when nurse is off work
             System.out.println("Nurse is off today");           // output for nurse off work
         }
+    /*
+    Question 8: Working out: First check if the gym is open, check if client has gym key. If yes print "Welcome to Lumi's fitness, enjoy your workout,
+    If not print "Please scan your gym key". If gym is not open print "Sorry gym is closed for the day"
+
+     */
+        boolean isGymOpen = true;
+        boolean hasPassKey = true;
+
+        if (isGymOpen) {
+            if (hasPassKey) {
+                System.out.println("Welcome to Lumi's fitness, enjoy your workout");
+            } else {
+                System.out.println("Please scan your gym key");
+            }
+        } else {
+            System.out.println("Sorry gym is closed for the day");
+        }
+
+     /*
+     Question 9: First check if cat is home, check if cat is awake. If yes  print check on cat's food and water. If not print "Please give cat food".
+     If cat is not home, print "Please clean cat litter box".
+      */
+        boolean isCatHome = true;
+        boolean isCatAwake = true;
+
+        if (isCatHome) {
+            if (isCatAwake) {
+                System.out.println("Please check cat's food and water");
+            } else {
+                System.out.println("Please give cat some food and water");
+            }
+            } else {
+                System.out.println("Please clean cat litter");
+            }
+
+
     }
 }
