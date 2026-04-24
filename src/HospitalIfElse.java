@@ -207,32 +207,34 @@ Below 5000 → print "Full payment due at checkout"
  print "Patient can be admitted". If no valid ID print "ID required before admission". If hospital is not open print "Hospital is closed please visit tomorrow."
  */
 
-        boolean isHospitalOpen = false;
-        boolean hasValidId = false;
-        if (isHospitalOpen) {
+        boolean isHospitalOpen = false;             //assigned a variable ishospitalopen a boolean datatype because hospital is either open or not, not in between
+        boolean hasValidId = false;                //assigned a variable hasvalidid a boolean datatype because patient/ visitor can has id or not have id, not in between
+
+
+        if (isHospitalOpen) {                     // checking if hospital is open condition with nested if/else
             if (hasValidId) {
-                System.out.println("Patient can be admitted");
+                System.out.println("Patient can be admitted");   //output if has valid id
             } else {
-                System.out.println("ID required before admission");
+                System.out.println("ID required before admission");    //output if doesnot have valid id
             }
-        } else {
-          System.out.println("Hospital is closed for the day please visit tomorrow");
+        } else {                                    // else condition when hospital is not open our else condition
+          System.out.println("Hospital is closed for the day please visit tomorrow"); // output when hospital is closed
         }
  /*
   Question 7: Nurse overtime: First check if a nurse is on duty, check if she has worked more than 8 hours. If yes print "Nurse eligible for overtime pay."
   If no print "Nurse on regular hours." If nurse is not on duty print "Nurse is off today".
   */
-        boolean isNurseOnDuty = true;
-        int workHrs = 18;
+        boolean isNurseOnDuty = true;           //assigned a variable isnurseonduty a boolean datatype because nurse is either working or not working.
+        int workHrs = 18;                      // assigned a variable workhours a integer datatype
 
-        if(isNurseOnDuty) {
+        if(isNurseOnDuty) {                  // if nurseisonduty check nested if/else condition for hours are > 8 or 8 hrs to check for overtime
             if (workHrs > 8) {
-                System.out.println("Nurse eligible for overtime pay");
+                System.out.println("Nurse eligible for overtime pay");     // output if nurse works overtime
             } else {
-                System.out.println("Nurse on regular pay hours");
+                System.out.println("Nurse on regular pay hours");    // output if nurse works regular hours
             }
-        } else {
-            System.out.println("Nurse is off today");
+        } else {                                                 // else condition when nurse is off work
+            System.out.println("Nurse is off today");           // output for nurse off work
         }
     }
 }
