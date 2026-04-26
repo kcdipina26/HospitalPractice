@@ -271,6 +271,23 @@ Below 5000 → print "Full payment due at checkout"
                 System.out.println("Please clean cat litter");
             }
 
+    /*
+    Question 10: First check if doctor is listed on call, check if phone no is available, if yes print " Call the on call doctor and report the critical lab results.
+    If not print " Please find a secondary doctor on call or patient primary care doctor". If doctor is not on call "Please pa or nurse practitioner"
 
+     */
+        boolean isDoctorCall = false;
+        boolean isDoctorPhoneNoAvailable = false;
+
+        if (isDoctorPhoneNoAvailable) {
+            if (isDoctorCall) {
+                System.out.println("Call the on call doctor and report the critical lab results for the patient");
+
+            } else {
+                System.out.println("Please find a secondary doctor on call or contact patient primary care doctor");
+            }
+        } else {
+            System.out.println("If doctor is not on call, please call pa or nurse practitioner");
+        }
     }
 }
