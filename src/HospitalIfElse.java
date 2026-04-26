@@ -289,5 +289,23 @@ Below 5000 → print "Full payment due at checkout"
         } else {
             System.out.println("If doctor is not on call, please call pa or nurse practitioner");
         }
+
+   /*
+   Question 11: First check if laboratory specimen in checked in, if yes print ("Put the sample in the centrifuge per requirement",
+    If not print please call the specific department and tell them to redraw the sample. If not print please continue running remaining qc.
+    */
+        boolean hasLabSpecimen = false;
+        boolean isSampleCheckedIn  = false;
+
+        if (hasLabSpecimen) {
+            if(isSampleCheckedIn) {
+                System.out.println("Put the sample in the centrifuge per requirement");
+            } else {
+                System.out.println("Please call the specific department and tell medical provider to redraw the sample");
+            }
+        } else {
+            System.out.println("Please continue running remaining quality control in the laroche analyzer");
+        }
+
     }
 }
