@@ -1,6 +1,11 @@
+import java.sql.SQLOutput;
+
 public class HospitalIfElse {
 
+
     public static void main(String[] args) {
+
+
         //if/else if statement question practice
  /*
  Question 1: Patient Priority Level
@@ -306,6 +311,8 @@ Below 5000 → print "Full payment due at checkout"
         } else {
             System.out.println("Please continue running remaining quality control in the laroche analyzer");
         }
+
+
 
     }
 }
