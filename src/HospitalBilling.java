@@ -29,14 +29,14 @@ Sample of method creation and example
         isSeniorPatient(65) → true
         isSeniorPatient(40) → false
         */
-        public boolean isSeniorPatient(int age) {              //This is one of the method for this question
-            if (age >= 70 || age >= 65) {
+        public boolean isSeniorPatient(int age) {
+            //If else condition if is senior = or > 65 return true else false
+            if(age >=65) {
                 return true;
-            }  else if (age == 40) {                 //last else if and else is optional, therefore is not present
+            }
+            else {
                 return false;
             }
-            return false;
-
         }
 
         /*
@@ -49,8 +49,11 @@ Sample of method creation and example
         calculateBillAfterInsurance(500.00) → 400.0
         */
         public double calculateBillAfterInsurance(double totalBill) {
-            double patientTotalBillOffInsurance = (totalBill / INSURANCE_DISCOUNT);
-            return patientTotalBillOffInsurance;
+            double patientTotalBillWithInsurance = (totalBill * INSURANCE_DISCOUNT);
+            //calculate patient total bill after insurance total bill - insurance * total bill (measure discount)
+            double patientTotalBillAfterInsurance = (totalBill - patientTotalBillWithInsurance );
+            //return patient total bill after insurance applied and data type is double per method.
+            return patientTotalBillAfterInsurance;
         }
 
         /*
@@ -65,8 +68,11 @@ Sample of method creation and example
         calculateFinalBill(1000.00, false, false) → 1000.0
         */
         public double calculateFinalBill(double totalBill, boolean isSenior, boolean hasInsurance) {
-            double seniorTotalBillAfterInsurance = (totalBill) * (INSURANCE_DISCOUNT + SENIOR_DISCOUNT);
-            double totalBillAfterInsurance = (totalBill) * (INSURANCE_DISCOUNT);
+            //calculate the senior total bill with insurance
+            double seniorTotalBillWithInsurance =  (INSURANCE_DISCOUNT  * totalBill) + (SENIOR_DISCOUNT * totalBill) ;
+            double seniorTotalBillAfterInsurance =  totalBill - seniorTotalBillWithInsurance;
+            double totalBillOffInsurance = (totalBill) * (INSURANCE_DISCOUNT);
+            double totalBillAfterInsurance = totalBill - totalBillOffInsurance;
             double totalBillWithoutInsurance = totalBill;
             if (isSenior) {
                 if (hasInsurance) {
@@ -79,10 +85,14 @@ Sample of method creation and example
             return totalBillWithoutInsurance;
         }
 
+
+
         public static void main(String[] args) {
             HospitalBilling billing = new HospitalBilling();      //calling the method
-            System.out.println(billing.isSeniorPatient(56));
-            System.out.println(billing.calculateBillAfterInsurance(1000.00));
+            System.out.println(billing.isSeniorPatient(70));
+            System.out.println(billing.isSeniorPatient(65));
+            System.out.println(billing.isSeniorPatient(40));
+            System.out.println(billing.calculateBillAfterInsurance(500.00));
             System.out.println(billing.calculateFinalBill(1000.00, true, true));
             return;
 
