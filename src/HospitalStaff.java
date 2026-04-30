@@ -1,10 +1,9 @@
 public class HospitalStaff {
 
 
-
-        private final double OVERTIME_RATE = 1.5;
-        private final int REGULAR_HOURS = 8;
-        private final double TAX_RATE = 0.25;
+    private final double OVERTIME_RATE = 1.5;
+    private final int REGULAR_HOURS = 8;
+    private final double TAX_RATE = 0.25;
 
         /*
         Return true if nurse worked overtime.
@@ -15,17 +14,17 @@ public class HospitalStaff {
         isOvertime(6) → false
         */
 
-        //This is method with public access from any class, boolean is the return type (true of false) & isOvertime method name camelCasing with 1 parameter.
+    //This is method with public access from any class, boolean is the return type (true of false) & isOvertime method name camelCasing with 1 parameter.
 
-        public boolean isOvertime(int hoursWorked) {
+    public boolean isOvertime(int hoursWorked) {
 
-         //If condition worked more than 8 hrs, qualify/pay for overtime, return type true if > 8, false if <=8 hrs.
-            if (hoursWorked > 8) {
-                return true;
-            } else {
-                return false;
-            }
+        //If condition worked more than 8 hrs, qualify/pay for overtime, return type true if > 8, false if <=8 hrs.
+        if (hoursWorked > 8) {
+            return true;
+        } else {
+            return false;
         }
+    }
 
         /*
         Calculate nurse's daily pay.
@@ -36,24 +35,21 @@ public class HospitalStaff {
         calculateDailyPay(10, 20.00) → 220.0
         */
 
-        //Method: public access for any class, double return type (better for money),
-        // method name calculateDailyPay camel casing: This method calculates daily pay by tracking hours.
+    //Method: public access for any class, double return type (better for money),
+    // method name calculateDailyPay camel casing: This method calculates daily pay by tracking hours.
 
-        public double calculateDailyPay(int hoursWorked, double hourlyRate) {
+    public double calculateDailyPay(int hoursWorked, double hourlyRate) {
+        double regularTimePay = (REGULAR_HOURS * hourlyRate);
 
-         //Calculates overtime pay (hours an a half pay times regular pay for overtime employees.
-            double regularPay = (hoursWorked * hourlyRate);
-            double overTimePay = (regularPay) + (hoursWorked * 1.5);
-        //If else condition, if worked more than 8 hrs pay overtime.
+        double overTimePay =+ regularTimePay + (hoursWorked - REGULAR_HOURS) * (hourlyRate * OVERTIME_RATE)  ;
 
-            if (hoursWorked > 8) {
-                return overTimePay;
-        //Else pay regular hourly rate.
-            } else {
-                return regularPay;
-            }
+        if (hoursWorked <= 8) {
+            return regularTimePay;
+        } else {
+            return overTimePay;
         }
 
+    }
         /*
         Calculate pay after tax deduction of 25%.
         Examples:
@@ -61,15 +57,16 @@ public class HospitalStaff {
         calculatePayAfterTax(220.00) → 165.0
         */
 
-    //Method with public access to other class, double return data type & calculatePayAfterTax method name camelcasing & net pay after tax calculation.
 
-      public double calculatePayAfterTax(double grossPay) {
-      // Calculation on total income with tax = 0.25 * total income
-            double totalIncomeWithTaxes = (grossPay * TAX_RATE);
-      //Calculation of total income after tax & return its value.
-            double totalNetIncome = (grossPay - totalIncomeWithTaxes);
-            return totalNetIncome;
-      }
+        public double calculatePayAfterTax( double grossPay){
+
+
+        // Calculation on total income with tax = 0.25 * total income
+        double totalIncomeWithTaxes = (grossPay * TAX_RATE);
+        //Calculation of total income after tax & return its value.
+        double totalNetIncome = (grossPay - totalIncomeWithTaxes);
+        return totalNetIncome;
+    }
 
         /*
         Return true if staff member is eligible for bonus.
