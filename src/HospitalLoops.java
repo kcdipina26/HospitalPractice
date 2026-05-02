@@ -69,12 +69,12 @@ Hospital doors locked
  */
 
 public static void main(String[] args) {
-  for(int i = 1; i <=5; i = i + 1) {
-      System.out.println( "Closing in ..." + i +  " Hospital doors locked");
-  }
-}
-}
-
+    for(int i = 5; i >= 1; i--){
+        System.out.println("Hospital is closing in..." + i);
+    }
+    System.out.println("Hospital doors locked");
+   }
+ }
 /*
 Q5 — Loop with condition:
 Print only even patient numbers from 1 to 10:
