@@ -47,7 +47,7 @@ Hour 2: $40.0
 Hour 8: $160.0
 
 Solution: Question 3
-*/
+
     public static void main(String[] args) {
         for (int i = 1; i <= 8; i++) {
             double nurseEarning = 20.00;
@@ -64,6 +64,18 @@ Closing in 4
 ...
 Closing in 1
 Hospital doors locked
+
+
+ */
+
+public static void main(String[] args) {
+  for(int i = 1; i <=5; i = i + 1) {
+      System.out.println( "Closing in ..." + i +  " Hospital doors locked");
+  }
+}
+}
+
+/*
 Q5 — Loop with condition:
 Print only even patient numbers from 1 to 10:
 Even patient number: 2
