@@ -66,7 +66,7 @@ Closing in 1
 Hospital doors locked
 
 
- */
+
 
 public static void main(String[] args) {
     for(int i = 5; i >= 1; i--){
@@ -75,6 +75,7 @@ public static void main(String[] args) {
     System.out.println("Hospital doors locked");
    }
  }
+
 /*
 Q5 — Loop with condition:
 Print only even patient numbers from 1 to 10:
@@ -91,11 +92,41 @@ A hospital has 5 departments. Each department costs $1000. Calculate and print r
 After department 1 total cost: $1000.0
 After department 2 total cost: $2000.0
 ...
+
+Solution: Question 6
+
+    public static void main(String[] args) {                    //This is a method main
+        double departmentCost = 1000.00;                       //Assigning a department cost starting point
+    for(int i = 1; i <=5; i++){                                //For loop and initializing i and its condition with incrementation till 5
+      double  departmentTotalCost = (i * departmentCost);      //Calculation for the running total for each department
+        System.out.println("After department " + i + " total cost: " + departmentTotalCost );    //Print statement of the department
+        }
+
+     }
+
+
+ /*
 Q7 — Loop with String:
 Print each shift 3 times — Morning, Evening, Night:
 Shift 1: Morning
 Shift 2: Evening
 Shift 3: Night
+
+Solution: Question 7
+
+ */
+   public static void main(String[] args){
+    for(int i = 1; i <= 3; i++){
+        System.out.println("Shift " + i + " : Morning");
+//        System.out.println("Shift " + i + " : Evening");
+//        System.out.println("Shift " + i + " : Night");
+    }
+
+   }
+}
+
+
+ /*
 Q8 — Nested loop basics:
 A hospital has 3 floors, each floor has 4 rooms. Print every room:
 Floor 1 Room 1
