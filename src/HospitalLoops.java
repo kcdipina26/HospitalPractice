@@ -76,6 +76,10 @@ public static void main(String[] args) {
    }
  }
 
+
+
+
+
 /*
 Q5 — Loop with condition:
 Print only even patient numbers from 1 to 10:
@@ -114,7 +118,7 @@ Shift 3: Night
 
 Solution: Question 7
 
- */
+ /*
    public static void main(String[] args){
     for(int i = 1; i <= 3; i++){
         System.out.println("Shift " + i + " : Morning");
@@ -124,7 +128,7 @@ Solution: Question 7
 
    }
 }
-
+/*
 
  /*
 Q8 — Nested loop basics:
@@ -133,12 +137,31 @@ Floor 1 Room 1
 Floor 1 Room 2
 ...
 Floor 3 Room 4
+
+Solution: Question 8
+
+ */
+
+
+    public static void main(String[] args){
+        for (int i =1; i <=3; i++){
+            for(int j = 1; j <=4; j++){
+                System.out.println("Floor  " + i  + " Room " + j);
+            }
+        }
+
+    }
+}
+ /*
+
 Q9 — Loop with method:
 Use your isOvertime method from HospitalStaff. Loop through hours 6, 8, 10, 12 and print whether each is overtime or not:
 Hours 6 - Overtime: false
 Hours 8 - Overtime: false
 Hours 10 - Overtime: true
 Hours 12 - Overtime: true
+
+
 Q10 — Real world:
 A hospital collected payments from 5 patients: $200, $450, $300, $150, $500. Loop through and calculate total. Print total at the end:
 Total collected: $1600.0
