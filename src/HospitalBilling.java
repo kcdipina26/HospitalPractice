@@ -84,6 +84,28 @@ Sample of method creation and example
             return totalBillWithoutInsurance;
         }
 
+/*
+  A hospital collected payments from 5 patients: $200, $450, $300, $150, $500. Print total at the end:
+  Total collected: $1600.0
+   Patient 1: Payment is 200.00
+  Patient 2: Payment received 450
+   .......
+  Total collected (sum all )
+ */
+
+        public int patientTotalCollection(int[] totalPatientCollection) {
+            int[] totalCollection = new int[]{ 200, 450, 300, 150, 500 };
+
+            for (int i = 1; i <= 5; i++) {
+                System.out.println("Patient " + i + " Payment received is " + totalCollection);
+            }
+            int sum = 0;
+            for (int i = 0; i < totalCollection.length; i++) {
+                sum = sum + totalCollection[i];
+                System.out.println("Total collected is " + totalCollection);
+            }
+            return sum;
+        }
 
         public static void main(String[] args) {
             HospitalBilling billing = new HospitalBilling();      //calling the method
@@ -92,10 +114,11 @@ Sample of method creation and example
             System.out.println(billing.isSeniorPatient(40));
             System.out.println(billing.calculateBillAfterInsurance(500.00));
             System.out.println(billing.calculateFinalBill(1000.00, true, true));
+            //System.out.println(billing.patientTotalCollection(200));
             return;
 
 
         }
-    }
 
+    }
 

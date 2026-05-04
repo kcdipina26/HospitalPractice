@@ -1,3 +1,7 @@
+// import HospitalPractice.java;    //note: no need to import as java does this automatically
+
+// import HospitalStaff.java;
+
 public class HospitalLoops {
 
     //This file is to learn and practice loops in the hospital billing system application in java
@@ -37,8 +41,10 @@ Solution: Question 2
     }
 }
 
- */
-/*Q3 — Math inside loop:
+*/
+
+
+/* Q3 — Math inside loop:
 
 A nurse earns $20/hour. Print her earnings for each hour from 1 to 8:
 Hour 1: $20.0
@@ -124,10 +130,10 @@ Solution: Question 7
         System.out.println("Shift " + i + " : Morning");
 //        System.out.println("Shift " + i + " : Evening");
 //        System.out.println("Shift " + i + " : Night");
-    }
+     }
 
-   }
-}
+    }
+  }
 /*
 
  /*
@@ -143,15 +149,16 @@ Solution: Question 8
  */
 
 
-    public static void main(String[] args){
-        for (int i =1; i <=3; i++){
-            for(int j = 1; j <=4; j++){
-                System.out.println("Floor  " + i  + " Room " + j);
-            }
-        }
+    //    public static void main(String[] args){
+//        for (int i =1; i <=3; i++){
+//            for(int j = 1; j <=4; j++){
+//                System.out.println("Floor  " + i  + " Room " + j);
+//            }
+//        }
+//
+//    }
+//}
 
-    }
-}
  /*
 
 Q9 — Loop with method:
@@ -160,12 +167,63 @@ Hours 6 - Overtime: false
 Hours 8 - Overtime: false
 Hours 10 - Overtime: true
 Hours 12 - Overtime: true
+*/
 
+//    public static void main(String[] args){
+////    public boolean isOvertime(int hasWorked) {     //no need to write this also how to connect to existing method?
+//        for (int i = 6; i <= 12; i = i + 2) {       //starting point was 6 hrs, condition up to 12, increment by 2 ( for output 6,8,10,12)
+//
+//            if (i > 8) {                             //if condition and print output
+//                System.out.println("Hours " + i + " Overtime:  true");
+//            } else {                                // else condition print output
+//                System.out.println("Hours " + i + " Overtime:  false");
+//            }
+//
+//        }
+//
+//    }
+//
+//}
 
+//    public static void main(String[] args){
+//        HospitalStaff staff = new HospitalStaff();
+//            for(int i = 6; i <=12; i = i + 2){
+//                System.out.println("Hours " + i + " Overtime " + staff.isOvertime(i));
+//            }
+//        }
+//    }
+
+/*
 Q10 — Real world:
 A hospital collected payments from 5 patients: $200, $450, $300, $150, $500. Loop through and calculate total. Print total at the end:
 Total collected: $1600.0
+Patient 1: Payment is 200.00
+Patient 2: Payment received 450
+.......
+Total collected (sum all )
+ /*
+
+
  */
+
+    //public int patientTotalCollection(int[] totalPatientCollection) {
+    public static void main(String[] args) {
+        int sum = 0;
+        int[] totalCollection = new int[]{200, 450, 300, 150, 500};
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Patient " + i + " Payment received is " + totalCollection[i]);
+            sum = sum + totalCollection[i];
+        }
+        for (int i = 0; i <= totalCollection.length; i++) {
+            sum = sum + totalCollection[i];
+//           System.out.println("Total collected is " + sum);  //to fix the total calculation and print
+
+        }
+    }
+}
+
+
 
 
 
