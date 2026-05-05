@@ -206,23 +206,22 @@ Total collected (sum all )
 
  */
 
-    //public int patientTotalCollection(int[] totalPatientCollection) {
+
     public static void main(String[] args) {
-        int sum = 0;
-        int[] totalCollection = new int[]{200, 450, 300, 150, 500};
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Patient " + i + " Payment received is " + totalCollection[i]);
-            sum = sum + totalCollection[i];
-        }
-        for (int i = 0; i <= totalCollection.length; i++) {
-            sum = sum + totalCollection[i];
-//           System.out.println("Total collected is " + sum);  //to fix the total calculation and print
+        int[] totalCollection = new int[] { 200, 450, 300, 150, 500 };   //list of arrays and its known values
 
+        int sum = 0;                                                   //declare sum variable to calculate within loop
+
+        for (int i = 0; i < totalCollection.length; i++) {               //loops through array elements
+            sum = sum + totalCollection[i];                             //sum of total patient payment that hospital collected
+            System.out.println("Patient " + (1+i)  + " Payment received is " + totalCollection[i]);   //print statement i+1 for real patient no.
         }
+        System.out.println("Total Collected " + sum);                       //print sum in seperate line
+        return;
     }
-}
 
+}
 
 
 
