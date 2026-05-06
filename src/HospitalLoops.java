@@ -230,18 +230,40 @@ Loop through and print each nurse's salary. Then print the highest paid nurse's 
  */
 
 
-//    public static void main(String[] args) {
-//    int [] nursesSalaries = new int[] { 45000, 52000, 38000, 61000, 49000 };
-//    int highestPaidNurse = nursesSalaries[1];
-//    // int [] highestPaidNurse = nursesSalaries(nursesSalaries.length - 4);  //tried different approach commented out cause did not work
+    public static void main(String[] args) {
+        int[] nursesSalaries = new int[] {45000, 52000, 38000, 61000, 49000};
+        int highestPaidNurse = 0;
+
+        //1st loop to go through the arrays indexes and print out the elements
+        for (int i = 0; i < nursesSalaries.length; i++) {                                 // for loop with an array, gives all the salaries in array and prints them
+
+            System.out.println("Nurse salary: " + (1 + i) + " is " + nursesSalaries[i]);          //print statement do not forget i in the nursesSalaries array as this variable is at work
+
+        }
+        //2nd Loop through and print the highest paid nurse's salary at the end and this is a primitive array type.
+        for (int i = 0; i < nursesSalaries.length; i++) {
+            if (highestPaidNurse < nursesSalaries[i]) {
+                highestPaidNurse = nursesSalaries[i];
+            }
+
+        }
+        System.out.println("The highest nurse salary in this department is " + highestPaidNurse);
+    }
+}
+ //Second approach with for loop practice
+
+//    static int findSalary(int [] arr) {
+//        int maximum = arr[0];
+//        for (int value : arr) {
+//            if (value > maximum) {
+//                maximum = value;
+//            }
+//        }
+//        System.out.print("The highest nurse salary in this department is ");
+//        return  maximum;
 //
-//    for(int i = 0; i < nursesSalaries.length; i++){                                 // for loop with an array, gives all the salaries in array and prints them
-//        System.out.println("Nurse salary: "  + (1+i) + " is " + nursesSalaries[i]);         //print statement do not forget i in the nursesSalaries array as this variable is at work
 //    }
-//        System.out.println("The highest paid nurse's salary is " + highestPaidNurse);         // Prints outside of the loop for different line print.
 //
-//
-//    }
 //}
 
 /*
@@ -265,13 +287,13 @@ A patient must fill out an intake form at least once. Use do-while to print "Ple
 
  */
 
-    public static void main(String[] args){
-        boolean isFormCompleted = false;
-    do {
-        System.out.println("Please complete intake form");
-
-    }while(isFormCompleted == true);
-        System.out.println("Intake form has been completed");
-    }
-
-}
+//    public static void main(String[] args){
+//        boolean isFormCompleted = false;
+//    do {
+//        System.out.println("Please complete intake form");
+//
+//    }while(isFormCompleted == true);
+//        System.out.println("Intake form has been completed");
+//    }
+//
+//}
