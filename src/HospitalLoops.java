@@ -204,7 +204,7 @@ Total collected (sum all )
  /*
 
 
- */
+
 
 
     public static void main(String[] args) {
@@ -222,7 +222,56 @@ Total collected (sum all )
     }
 
 }
+*/
+
+/*
+Question 11- For loop and array question: A hospital has 5 nurses with these salaries: $45000, $52000, $38000, $61000, $49000.
+Loop through and print each nurse's salary. Then print the highest paid nurse's salary at the end.
+ */
 
 
+//    public static void main(String[] args) {
+//    int [] nursesSalaries = new int[] { 45000, 52000, 38000, 61000, 49000 };
+//    int highestPaidNurse = nursesSalaries[1];
+//    // int [] highestPaidNurse = nursesSalaries(nursesSalaries.length - 4);  //tried different approach commented out cause did not work
+//
+//    for(int i = 0; i < nursesSalaries.length; i++){                                 // for loop with an array, gives all the salaries in array and prints them
+//        System.out.println("Nurse salary: "  + (1+i) + " is " + nursesSalaries[i]);         //print statement do not forget i in the nursesSalaries array as this variable is at work
+//    }
+//        System.out.println("The highest paid nurse's salary is " + highestPaidNurse);         // Prints outside of the loop for different line print.
+//
+//
+//    }
+//}
 
+/*
+While Loop — Basic:
+A hospital has 10 ICU beds. Patients keep getting admitted one at a time. Use a while loop to admit patients until ICU is full. Print "Patient admitted, beds remaining: X" each time.
+*/
 
+//    public static void main(String[] args){
+//        int i = 1;                      //initialize the variable i first
+//       while(i <= 10){                 //the condition for the program
+//            System.out.println(" Patient admitted, beds remaining " + i);         //print the patient admitted and beds remaining
+//           i = i + 1;                                // increment i could write in print line but this is best practice?
+//        }
+//
+//    }
+//}
+
+/*
+Do-While — Basic:
+A patient must fill out an intake form at least once. Use do-while to print "Please complete intake form" and keep asking until formCompleted is true. Set it to true after first run so it stops.
+
+ */
+
+    public static void main(String[] args){
+        boolean isFormCompleted = false;
+    do {
+        System.out.println("Please complete intake form");
+
+    }while(isFormCompleted == true);
+        System.out.println("Intake form has been completed");
+    }
+
+}
