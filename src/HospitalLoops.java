@@ -230,27 +230,27 @@ Loop through and print each nurse's salary. Then print the highest paid nurse's 
  */
 
 
-    public static void main(String[] args) {
-        int[] nursesSalaries = new int[] {45000, 52000, 38000, 61000, 49000};
-        int highestPaidNurse = 0;
-
-        //1st loop to go through the arrays indexes and print out the elements
-        for (int i = 0; i < nursesSalaries.length; i++) {                                 // for loop with an array, gives all the salaries in array and prints them
-
-            System.out.println("Nurse salary: " + (1 + i) + " is " + nursesSalaries[i]);          //print statement do not forget i in the nursesSalaries array as this variable is at work
-
-        }
-        //2nd Loop through and print the highest paid nurse's salary at the end and this is a primitive array type.
-        for (int i = 0; i < nursesSalaries.length; i++) {
-            if (highestPaidNurse < nursesSalaries[i]) {
-                highestPaidNurse = nursesSalaries[i];
-            }
-
-        }
-        System.out.println("The highest nurse salary in this department is " + highestPaidNurse);
-    }
-}
- //Second approach with for loop practice
+//    public static void main(String[] args) {
+//        int[] nursesSalaries = new int[] {45000, 52000, 38000, 61000, 49000};
+//        int highestPaidNurse = 0;
+//
+//        //1st loop to go through the arrays indexes and print out the elements
+//        for (int i = 0; i < nursesSalaries.length; i++) {                                 // for loop with an array, gives all the salaries in array and prints them
+//
+//            System.out.println("Nurse salary: " + (1 + i) + " is " + nursesSalaries[i]);          //print statement do not forget i in the nursesSalaries array as this variable is at work
+//
+//        }
+//        //2nd Loop through and print the highest paid nurse's salary at the end and this is a primitive array type.
+//        for (int i = 0; i < nursesSalaries.length; i++) {
+//            if (highestPaidNurse < nursesSalaries[i]) {
+//                highestPaidNurse = nursesSalaries[i];
+//            }
+//
+//        }
+//        System.out.println("The highest nurse salary in this department is " + highestPaidNurse);
+//    }
+//}
+    //Second approach with for loop practice
 
 //    static int findSalary(int [] arr) {
 //        int maximum = arr[0];
@@ -297,3 +297,44 @@ A patient must fill out an intake form at least once. Use do-while to print "Ple
 //    }
 //
 //}
+
+    /* These are practice questions for arrays
+    Q1. A hospital has 6 patient ages: {34, 67, 23, 89, 45, 12}. Print all ages and find the youngest patient.
+    */
+//    public static void main(String[] args) {
+//        int[] NoOfPatientInHospital = new int[]{34, 67, 23, 89, 45, 12};
+//        int youngestPatientInHospital = 15;         //have assinged a value will redo the solution
+//
+//        for (int i = 0; i < NoOfPatientInHospital.length; i++) {
+//            System.out.println("Age of patient " + (1 + i) + " is " + NoOfPatientInHospital[i]);
+//        }
+//        for (int i = 0; i < NoOfPatientInHospital.length; i++) {
+//            if (youngestPatientInHospital > NoOfPatientInHospital[i]) {
+//                youngestPatientInHospital = NoOfPatientInHospital[i];
+//            }
+//        }
+//        System.out.println("Youngest patient in the hospital is " + youngestPatientInHospital);
+//
+//    }
+//}
+/*
+Q2. A lab has test results for 5 patients: {98.6, 101.2, 99.1, 103.5, 97.8}. Print all results and count how many patients have fever (above 99.5).
+ */
+
+    public static void main(String[] args){
+    double[]  patientBodyTemperature = new double [] {98.6, 101.2, 99.1, 103.5, 97.8};
+    double patientWithFever = 99.5;
+
+    for(int i = 0; i < patientBodyTemperature.length; i++){
+        System.out.println("Patient " + (1+i) + " vitals for body temperature : " + patientBodyTemperature[i]);
+    }
+
+        for(int i = 0; i < patientBodyTemperature.length; i++){
+            if(patientBodyTemperature[i] < patientWithFever){
+                patientBodyTemperature[i] = patientWithFever;
+            }
+            System.out.println("Patient " + i +  "has fever body temperature is " + patientWithFever);              // will fix and redo the solution testing for now
+        }
+
+    }
+}
