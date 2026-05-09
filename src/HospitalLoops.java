@@ -302,13 +302,13 @@ A patient must fill out an intake form at least once. Use do-while to print "Ple
     Q1. A hospital has 6 patient ages: {34, 67, 23, 89, 45, 12}. Print all ages and find the youngest patient.
     */
 //    public static void main(String[] args) {
-//        int[] NoOfPatientInHospital = new int[]{34, 67, 23, 89, 45, 12};
-//        int youngestPatientInHospital = 15;         //have assinged a value will redo the solution
+//        int[] NoOfPatientInHospital = new int[]{34, 67, 23, 89, 45, 12};            //declare & initialize array NoOfPatientInHospital
+//        int youngestPatientInHospital = 15;         //have assinged a value to compare
 //
-//        for (int i = 0; i < NoOfPatientInHospital.length; i++) {
+//        for (int i = 0; i < NoOfPatientInHospital.length; i++) {            //loops through an array & prints through all patient ages.
 //            System.out.println("Age of patient " + (1 + i) + " is " + NoOfPatientInHospital[i]);
 //        }
-//        for (int i = 0; i < NoOfPatientInHospital.length; i++) {
+//        for (int i = 0; i < NoOfPatientInHospital.length; i++) {                    //nested loop to compare through array & print out youngest patient.
 //            if (youngestPatientInHospital > NoOfPatientInHospital[i]) {
 //                youngestPatientInHospital = NoOfPatientInHospital[i];
 //            }
@@ -320,21 +320,25 @@ A patient must fill out an intake form at least once. Use do-while to print "Ple
 /*
 Q2. A lab has test results for 5 patients: {98.6, 101.2, 99.1, 103.5, 97.8}. Print all results and count how many patients have fever (above 99.5).
  */
+    public static void main(String[] args) {
+        double[] patientBodyTemperature = new double[] {98.6, 101.2, 99.1, 103.5, 97.8};     //declare & initialize array
+        double patientWithFeverTemp = 99.5;                                                 //declare patient with fever variable & value.
 
-    public static void main(String[] args){
-    double[]  patientBodyTemperature = new double [] {98.6, 101.2, 99.1, 103.5, 97.8};
-    double patientWithFever = 99.5;
+        for (int i = 0; i < patientBodyTemperature.length; i++) {                           //for loop to go through and print all patient body temperature arrays.
 
-    for(int i = 0; i < patientBodyTemperature.length; i++){
-        System.out.println("Patient " + (1+i) + " vitals for body temperature : " + patientBodyTemperature[i]);
-    }
+            System.out.println(" Patient " + (1 + i) + " : " + " lab test results body temperature " + patientBodyTemperature[i]);           //print statement
 
-        for(int i = 0; i < patientBodyTemperature.length; i++){
-            if(patientBodyTemperature[i] < patientWithFever){
-                patientBodyTemperature[i] = patientWithFever;
+        }
+        for (int i = 0; i < patientBodyTemperature.length; i++) {                              //nested loop to compare & print out all the temperature that is greater than 99.5
+            if (patientBodyTemperature[i] > patientWithFeverTemp) {
+                patientWithFeverTemp = patientBodyTemperature[i];
+
+                System.out.println(" Patient " + (1+i) + " with fever temperature :  "  + patientWithFeverTemp);       //print statement for the patient no that has high fever and its temp
             }
-            System.out.println("Patient " + i +  "has fever body temperature is " + patientWithFever);              // will fix and redo the solution testing for now
+            }
+
+
         }
 
     }
-}
+
