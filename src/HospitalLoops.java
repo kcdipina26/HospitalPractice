@@ -342,7 +342,7 @@ Q2. A lab has test results for 5 patients: {98.6, 101.2, 99.1, 103.5, 97.8}. Pri
 //
 //    }
 
-    // Q3. A hospital has 4 departments with staff count: {45, 32, 67, 28}. Find total staff and print which department has most staff.
+    /* Q3. A hospital has 4 departments with staff count: {45, 32, 67, 28}. Find total staff and print which department has most staff.
     public static void main(String[] args) {
         int[] hospitalDepartmentCount = new int[]{45, 32, 67, 28};          //Declared & initialized integer variable hospital department count array
         int hospitalTotalStaff = 0;                                        //Declared a variable hospital total staff to calculate staff total.
@@ -352,9 +352,9 @@ Q2. A lab has test results for 5 patients: {98.6, 101.2, 99.1, 103.5, 97.8}. Pri
             hospitalTotalStaff = hospitalDepartmentCount[i] + hospitalTotalStaff;
 
         }
-        System.out.println(" Hopsital total staff no is " + hospitalTotalStaff);         //print statement outside of for loop to calculate total hospital staff
+        System.out.println(" Hospital total staff no is " + hospitalTotalStaff);         //print statement outside of for loop to calculate total hospital staff
     for(int i = 0; i < hospitalDepartmentCount.length; i++) {
-        if (hospitalHighestDepartmentNo < hospitalDepartmentCount[i]) {                 //for loop to calcualte the department with highest staff member
+        if (hospitalHighestDepartmentNo < hospitalDepartmentCount[i]) {                 //for loop to calculate the department with highest staff member
             hospitalHighestDepartmentNo = hospitalDepartmentCount[i];
 
         }
@@ -365,3 +365,25 @@ Q2. A lab has test results for 5 patients: {98.6, 101.2, 99.1, 103.5, 97.8}. Pri
 
     }
 }
+
+    Q4. A billing department has 6 invoices: {1200, 4500, 890, 3200, 5600, 2100}. Print all invoices above $2000 only.
+    Q5. A hospital tracked daily patient admissions for a week: {12, 8, 15, 6, 20, 11, 9}. Find the busiest day and total weekly admissions.
+     */
+    public static void main(String[] args){                            //Main function, method
+        int[] eachHospitalDeptInvoices = new int[] {1200, 4500, 890, 3200, 5600, 2100};           //declare and initialize array--Create invoice list (Collection of variables arrays)
+
+        int invoiceOverMinimum = 2000;                                                       //declare and initialize variable with minimum invoice threshold
+
+        for(int i = 0; i < eachHospitalDeptInvoices.length; i++) {                         // FOR loop -- for every department invoice
+
+            if(invoiceOverMinimum < eachHospitalDeptInvoices[i]){                        //If condition -- if invoice is greater than minimum
+
+               System.out.println("Department " + (1+i) + " --> " + eachHospitalDeptInvoices[i] + " --> Above Threshold ");   // Print: department no, invoice amt, status message
+            }
+
+        }                                                                                       //End loop
+
+    }
+
+}                                                                                                //END program
+
