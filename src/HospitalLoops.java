@@ -320,25 +320,48 @@ A patient must fill out an intake form at least once. Use do-while to print "Ple
 /*
 Q2. A lab has test results for 5 patients: {98.6, 101.2, 99.1, 103.5, 97.8}. Print all results and count how many patients have fever (above 99.5).
  */
+//    public static void main(String[] args) {
+//        double[] patientBodyTemperature = new double[] {98.6, 101.2, 99.1, 103.5, 97.8};     //declare & initialize array
+//        double patientWithFeverTemp = 99.5;                                                 //declare patient with fever variable & value.
+//
+//        for (int i = 0; i < patientBodyTemperature.length; i++) {                           //for loop to go through and print all patient body temperature arrays.
+//
+//            System.out.println(" Patient " + (1 + i) + " : " + " lab test results body temperature " + patientBodyTemperature[i]);           //print statement
+//
+//        }
+//        for (int i = 0; i < patientBodyTemperature.length; i++) {                              //nested loop to compare & print out all the temperature that is greater than 99.5
+//            if (patientBodyTemperature[i] > patientWithFeverTemp) {
+//                patientWithFeverTemp = patientBodyTemperature[i];
+//
+//                System.out.println(" Patient " + (1+i) + " with fever temperature :  "  + patientWithFeverTemp);       //print statement for the patient no that has high fever and its temp
+//            }
+//            }
+//
+//
+//        }
+//
+//    }
+
+    // Q3. A hospital has 4 departments with staff count: {45, 32, 67, 28}. Find total staff and print which department has most staff.
     public static void main(String[] args) {
-        double[] patientBodyTemperature = new double[] {98.6, 101.2, 99.1, 103.5, 97.8};     //declare & initialize array
-        double patientWithFeverTemp = 99.5;                                                 //declare patient with fever variable & value.
+        int[] hospitalDepartmentCount = new int[]{45, 32, 67, 28};          //Declared & initialized integer variable hospital department count array
+        int hospitalTotalStaff = 0;                                        //Declared a variable hospital total staff to calculate staff total.
+        int hospitalHighestDepartmentNo = 0;                               //Declared integer variable to calculate hospital highest department no.
 
-        for (int i = 0; i < patientBodyTemperature.length; i++) {                           //for loop to go through and print all patient body temperature arrays.
-
-            System.out.println(" Patient " + (1 + i) + " : " + " lab test results body temperature " + patientBodyTemperature[i]);           //print statement
+        for(int i = 0; i < hospitalDepartmentCount.length; i++) {        //for loop for calculation of hospital total staff.
+            hospitalTotalStaff = hospitalDepartmentCount[i] + hospitalTotalStaff;
 
         }
-        for (int i = 0; i < patientBodyTemperature.length; i++) {                              //nested loop to compare & print out all the temperature that is greater than 99.5
-            if (patientBodyTemperature[i] > patientWithFeverTemp) {
-                patientWithFeverTemp = patientBodyTemperature[i];
-
-                System.out.println(" Patient " + (1+i) + " with fever temperature :  "  + patientWithFeverTemp);       //print statement for the patient no that has high fever and its temp
-            }
-            }
-
+        System.out.println(" Hopsital total staff no is " + hospitalTotalStaff);         //print statement outside of for loop to calculate total hospital staff
+    for(int i = 0; i < hospitalDepartmentCount.length; i++) {
+        if (hospitalHighestDepartmentNo < hospitalDepartmentCount[i]) {                 //for loop to calcualte the department with highest staff member
+            hospitalHighestDepartmentNo = hospitalDepartmentCount[i];
 
         }
 
     }
+        System.out.println(" Hospital department with most staff is " + hospitalHighestDepartmentNo);     //print statement for hospital department with highest staff no.
 
+
+    }
+}
