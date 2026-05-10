@@ -367,23 +367,74 @@ Q2. A lab has test results for 5 patients: {98.6, 101.2, 99.1, 103.5, 97.8}. Pri
 }
 
     Q4. A billing department has 6 invoices: {1200, 4500, 890, 3200, 5600, 2100}. Print all invoices above $2000 only.
-    Q5. A hospital tracked daily patient admissions for a week: {12, 8, 15, 6, 20, 11, 9}. Find the busiest day and total weekly admissions.
+
      */
-    public static void main(String[] args){                            //Main function, method
-        int[] eachHospitalDeptInvoices = new int[] {1200, 4500, 890, 3200, 5600, 2100};           //declare and initialize array--Create invoice list (Collection of variables arrays)
+//    public static void main(String[] args){                            //Main function, method
+//        int[] eachHospitalDeptInvoices = new int[] {1200, 4500, 890, 3200, 5600, 2100};           //declare and initialize array--Create invoice list (Collection of variables arrays)
+//
+//        int invoiceOverMinimum = 2000;                                                       //declare and initialize variable with minimum invoice threshold
+//
+//        for(int i = 0; i < eachHospitalDeptInvoices.length; i++) {                         // FOR loop -- for every department invoice
+//
+//            if(invoiceOverMinimum < eachHospitalDeptInvoices[i]){                        //If condition -- if invoice is greater than minimum
+//
+//               System.out.println("Department " + (1+i) + " --> " + eachHospitalDeptInvoices[i] + " --> Above Threshold ");   // Print: department no, invoice amt, status message
+//            }
+//
+//        }                                                                                       //End loop
+//
+//    }
+//
+//}                                                                                                //END program
 
-        int invoiceOverMinimum = 2000;                                                       //declare and initialize variable with minimum invoice threshold
+/*
+ Q5. A hospital tracked daily patient admissions for a week: {12, 8, 15, 6, 20, 11, 9}. Find the busiest day and total weekly admissions.
 
-        for(int i = 0; i < eachHospitalDeptInvoices.length; i++) {                         // FOR loop -- for every department invoice
 
-            if(invoiceOverMinimum < eachHospitalDeptInvoices[i]){                        //If condition -- if invoice is greater than minimum
+    public static void main(String[] args){
+        int[] hospitalDailyPatientAdmissionNo = new int[] {12, 8, 15, 6, 20, 11, 9};     //Declare & Initialize array collection of hospital daily patient admission for a week variables.
 
-               System.out.println("Department " + (1+i) + " --> " + eachHospitalDeptInvoices[i] + " --> Above Threshold ");   // Print: department no, invoice amt, status message
-            }
+        int hospitalHighestPatientNo = 19;                                              //Declare & Initialize the variable hospital highest patient number and 19 as 21 is highest in array
 
-        }                                                                                       //End loop
+        int hospitalWeeklyTotalPatientAdmission = 0;                                  //Declare & Initialize the variable hospital weekly total patient admission and 0 to  calculate the value
+
+        for(int i = 0; i < hospitalDailyPatientAdmissionNo.length; i++ ){           //For loop through the arrays and find the busiest day and sum of all total weekly admission
+
+           if(hospitalHighestPatientNo < hospitalDailyPatientAdmissionNo[i]){       //If condition to compare the highest value & check each array.
+               System.out.println(" Hospital busiest day is " + (1+i) + " : " + hospitalDailyPatientAdmissionNo[i] + " patient");             // Print statement with which array has highest patient no that day of  the week
+
+           }
+            hospitalWeeklyTotalPatientAdmission = hospitalDailyPatientAdmissionNo[i] + hospitalWeeklyTotalPatientAdmission;           //calculate the hospital weekly total patient admission with array total variables & variable itself
+        }
+        System.out.println(" Hospital total weekly patient admission is : " + hospitalWeeklyTotalPatientAdmission + " patient");                    //Print the hospital total weekly patient admission.
 
     }
+}
 
-}                                                                                                //END program
+Q6. 5 nurses worked these hours this week: {38, 45, 40, 52, 36}. Print each nurse's hours and flag anyone who worked overtime (over 40 hours).
 
+ */
+
+    public static void main(String[] args){                              //Main function
+        int[]  nursesHoursWorked = new int[] {38, 45, 40, 52, 36};       //Declare & Initialize nurses work hours arrays- collection of all nurse hrs variables
+
+        int nurseOverTimeHoursWorked = 40;                              //Declare & give 40 as a comparing value to variable nurse over time working hrs
+
+    for(int i = 0; i < nursesHoursWorked.length; i++) {                 //For loop that goes through the list of arrays and increments it
+
+        if (nursesHoursWorked[i] > nurseOverTimeHoursWorked){           //If condition that compares/ checks if nurse has worked over time or not.
+
+            System.out.println(" Nurse " + (1 + i) + " work hrs : " + nursesHoursWorked[i] + " Overtime pay applied ");        //Print if nurse has worked overtime while going through loop.
+
+    } else {
+            System.out.println(" Nurse " + (1 + i) + " work hrs : " + nursesHoursWorked[i]);                //Print statement if nurse has not worked overtime. 
+        }
+
+//        for(int i = 0; i < nursesHoursWorked.length; i++) {
+//            if (nursesHoursWorked[i] > nurseOverTimeHoursWorked) {
+//                System.out.println(" Nurse " + (1 + i) + " work hrs : " + nursesHoursWorked[i] + " Overtime pay applied ");
+//            }
+        }
+
+    }
+}
