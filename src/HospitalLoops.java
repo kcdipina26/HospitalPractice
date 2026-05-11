@@ -415,26 +415,49 @@ Q6. 5 nurses worked these hours this week: {38, 45, 40, 52, 36}. Print each nurs
 
  */
 
-    public static void main(String[] args){                              //Main function
-        int[]  nursesHoursWorked = new int[] {38, 45, 40, 52, 36};       //Declare & Initialize nurses work hours arrays- collection of all nurse hrs variables
+//    public static void main(String[] args){                              //Main function
+//        int[]  nursesHoursWorked = new int[] {38, 45, 40, 52, 36};       //Declare & Initialize nurses work hours arrays- collection of all nurse hrs variables
+//
+//        int nurseOverTimeHoursWorked = 40;                              //Declare & give 40 as a comparing value to variable nurse over time working hrs
+//
+//    for(int i = 0; i < nursesHoursWorked.length; i++) {                 //For loop that goes through the list of arrays and increments it
+//
+//        if (nursesHoursWorked[i] > nurseOverTimeHoursWorked){           //If condition that compares/ checks if nurse has worked over time or not.
+//
+//            System.out.println(" Nurse " + (1 + i) + " work hrs : " + nursesHoursWorked[i] + " Overtime pay applied ");        //Print if nurse has worked overtime while going through loop.
+//
+//    } else {
+//            System.out.println(" Nurse " + (1 + i) + " work hrs : " + nursesHoursWorked[i]);                //Print statement if nurse has not worked overtime.
+//        }
+//
+////        for(int i = 0; i < nursesHoursWorked.length; i++) {              //This is second way of doing it
+////            if (nursesHoursWorked[i] > nurseOverTimeHoursWorked) {
+////                System.out.println(" Nurse " + (1 + i) + " work hrs : " + nursesHoursWorked[i] + " Overtime pay applied ");
+////            }
+//        }
+//
+//    }
+//}
 
-        int nurseOverTimeHoursWorked = 40;                              //Declare & give 40 as a comparing value to variable nurse over time working hrs
+/*
+While loops — 3 questions: 5/10/2026
+Q7. A hospital pharmacy has 60 doses of medication. Each patient takes 4 doses.
+Use while loop to dispense medication until stock runs below 4. Print doses remaining each time.
+ */
+//Q8. A patient's bill starts at $5000. Hospital applies 10% discount every billing cycle until bill drops below $2000. Print bill after each cycle.
+//Q9. ICU has 8 beds. Patients keep getting discharged one at a time. Use while loop until ICU is empty. Print beds occupied each time.
 
-    for(int i = 0; i < nursesHoursWorked.length; i++) {                 //For loop that goes through the list of arrays and increments it
+    public static void main(String[] args){
+        int pharmacyMedicationStock = 60;
+        int dosePerPatient = 4;
 
-        if (nursesHoursWorked[i] > nurseOverTimeHoursWorked){           //If condition that compares/ checks if nurse has worked over time or not.
-
-            System.out.println(" Nurse " + (1 + i) + " work hrs : " + nursesHoursWorked[i] + " Overtime pay applied ");        //Print if nurse has worked overtime while going through loop.
-
-    } else {
-            System.out.println(" Nurse " + (1 + i) + " work hrs : " + nursesHoursWorked[i]);                //Print statement if nurse has not worked overtime. 
+        while(pharmacyMedicationStock >= 3){
+            pharmacyMedicationStock = pharmacyMedicationStock - dosePerPatient;
+            System.out.println(" Hospital pharmacy medication dose remaining : " + pharmacyMedicationStock);
         }
+        System.out.println(" Low pharmacy medication dose remaining at : " + pharmacyMedicationStock + " Please refill ");
+// to do tomorrow again.
 
-//        for(int i = 0; i < nursesHoursWorked.length; i++) {
-//            if (nursesHoursWorked[i] > nurseOverTimeHoursWorked) {
-//                System.out.println(" Nurse " + (1 + i) + " work hrs : " + nursesHoursWorked[i] + " Overtime pay applied ");
-//            }
-        }
 
     }
 }
