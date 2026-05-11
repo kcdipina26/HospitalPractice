@@ -443,11 +443,8 @@ Q6. 5 nurses worked these hours this week: {38, 45, 40, 52, 36}. Print each nurs
 While loops — 3 questions: 5/10/2026
 Q7. A hospital pharmacy has 60 doses of medication. Each patient takes 4 doses.
 Use while loop to dispense medication until stock runs below 4. Print doses remaining each time.
- */
-//Q8. A patient's bill starts at $5000. Hospital applies 10% discount every billing cycle until bill drops below $2000. Print bill after each cycle.
-//Q9. ICU has 8 beds. Patients keep getting discharged one at a time. Use while loop until ICU is empty. Print beds occupied each time.
-
-    public static void main(String[] args){
+Solution
+public static void main(String[] args){
         int pharmacyMedicationStock = 60;
         int dosePerPatient = 4;
 
@@ -456,8 +453,22 @@ Use while loop to dispense medication until stock runs below 4. Print doses rema
             System.out.println(" Hospital pharmacy medication dose remaining : " + pharmacyMedicationStock);
         }
         System.out.println(" Low pharmacy medication dose remaining at : " + pharmacyMedicationStock + " Please refill ");
-// to do tomorrow again.
+//Q9. ICU has 8 beds. Patients keep getting discharged one at a time. Use while loop until ICU is empty. Print beds occupied each time.
+ */
+//Q8. A patient's bill starts at $5000. Hospital applies 10% discount every billing cycle until bill drops below $2000. Print bill after each cycle.
 
+   public static void main(String[] args){
+
+       double patientABill = 5000.00;
+       //Hospital discount is 10 percent
+       double hospitalDiscountEveryBill = 0.1;
+
+       while(patientABill > 2000.00){
+           patientABill =  patientABill - (patientABill * hospitalDiscountEveryBill);
+           System.out.println("Hospital billing cycle amount is : " + patientABill);
+
+       }
+       System.out.println(" Hospital billing cycle at " + patientABill + " has ended. ");
 
     }
 }
