@@ -453,10 +453,10 @@ public static void main(String[] args){
             System.out.println(" Hospital pharmacy medication dose remaining : " + pharmacyMedicationStock);
         }
         System.out.println(" Low pharmacy medication dose remaining at : " + pharmacyMedicationStock + " Please refill ");
-//Q9. ICU has 8 beds. Patients keep getting discharged one at a time. Use while loop until ICU is empty. Print beds occupied each time.
+
  */
 //Q8. A patient's bill starts at $5000. Hospital applies 10% discount every billing cycle until bill drops below $2000. Print bill after each cycle.
-
+/*
    public static void main(String[] args){
 
        double patientABill = 5000.00;
@@ -472,3 +472,24 @@ public static void main(String[] args){
 
     }
 }
+
+*/
+
+//Q9. ICU has 8 beds. Patients keep getting discharged one at a time. Use while loop until ICU is empty. Print beds occupied each time.
+
+    public static void main(String[] args){             //Main method/function
+    int icuBeds = 8;                                   // IcuBeds available variable declaration & initialization
+    int patientDischargePerTime = 1;                  // Per patient discharge  variable declaration & initialization
+
+
+    while(icuBeds >= patientDischargePerTime){                //while loop  to loop from 8 to 0 patient per discharge beds occupied each time until it stops at 0. 
+        icuBeds = icuBeds - patientDischargePerTime;          //icuebeds available each time is  total available icu beds - per patient
+
+        System.out.println(" Bed occupied by patient :" + icuBeds);  //Print statement beds occupied each time until non left.
+    }
+
+
+    }
+}
+
+//To do practice more while loops
