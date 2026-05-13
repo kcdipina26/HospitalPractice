@@ -2,6 +2,8 @@
 
 // import HospitalStaff.java;
 
+import java.sql.SQLOutput;
+
 public class HospitalLoops {
 
     //This file is to learn and practice loops in the hospital billing system application in java
@@ -457,6 +459,7 @@ public static void main(String[] args){
  */
 //Q8. A patient's bill starts at $5000. Hospital applies 10% discount every billing cycle until bill drops below $2000. Print bill after each cycle.
 /*
+
    public static void main(String[] args){
 
        double patientABill = 5000.00;
@@ -476,20 +479,39 @@ public static void main(String[] args){
 */
 
 //Q9. ICU has 8 beds. Patients keep getting discharged one at a time. Use while loop until ICU is empty. Print beds occupied each time.
+/*
+   public static void main(String[] args){
+   int icuBeds = 8;
+   int perPatientDischarge = 1;
 
-    public static void main(String[] args){             //Main method/function
-    int icuBeds = 8;                                   // IcuBeds available variable declaration & initialization
-    int patientDischargePerTime = 1;                  // Per patient discharge  variable declaration & initialization
+   while(icuBeds >= perPatientDischarge){
+       icuBeds = icuBeds - perPatientDischarge;
+       System.out.println("Icu bed occupied each time per patient, remaining bed :" + icuBeds);
+   }
 
 
-    while(icuBeds >= patientDischargePerTime){                //while loop  to loop from 8 to 0 patient per discharge beds occupied each time until it stops at 0. 
-        icuBeds = icuBeds - patientDischargePerTime;          //icuebeds available each time is  total available icu beds - per patient
 
-        System.out.println(" Bed occupied by patient :" + icuBeds);  //Print statement beds occupied each time until non left.
-    }
+   }
+}
 
+//Do while loops
+Question 10: A patient must confirm their date of birth at least once before registration completes. Use do-while. Set confirmed to true after the first run
+*/
+//    public static void main(String[] args) {      //main method
+//      boolean hasConfirmDOB = false;             //set condition to false to print atlease once
+//      do{
+//          System.out.println(" Please confirm your date of birth atleast once before registration completes");
+//      }while(hasConfirmDOB == true);           //comapres false == true and stops
+//    }
+//}
+
+//Q11. A nurse must clock in at least once per shift. Use do-while to print "Nurse clocked in" then stop.
+
+    public static void main(String[] args){                //main method
+     boolean hasClockInPerShift = true;                   //has nurse clocked in true
+     do{
+         System.out.println( "Nurse clocked in ");      //print once
+     }while(hasClockInPerShift == false);              //if nurse has not clocked in once per shift stop 
 
     }
 }
-
-//To do practice more while loops
