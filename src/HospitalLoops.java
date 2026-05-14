@@ -505,7 +505,7 @@ Question 10: A patient must confirm their date of birth at least once before reg
 //    }
 //}
 
-//Q11. A nurse must clock in at least once per shift. Use do-while to print "Nurse clocked in" then stop.
+/*Q11. A nurse must clock in at least once per shift. Use do-while to print "Nurse clocked in" then stop.
 
     public static void main(String[] args){                //main method
      boolean hasClockInPerShift = true;                   //has nurse clocked in true
@@ -515,3 +515,36 @@ Question 10: A patient must confirm their date of birth at least once before reg
 
     }
 }
+*/
+
+/*
+Questions for practice while loop & do while loop
+While loop:
+A patient is waiting. Hospital checks every 5 minutes. Start at 0 minutes. Print "Checking on patient..." until wait time reaches 20 minutes.
+*/
+//    public static void main(String[] args){
+//    int hospitalChecksOnPatientInMinutes = 5;
+//    int maxWaitTimePerPatient = 20;
+//
+//    while(maxWaitTimePerPatient >= hospitalChecksOnPatientInMinutes){             //loop while max wait time is 20 minutes and stop at 0
+//        maxWaitTimePerPatient = maxWaitTimePerPatient - hospitalChecksOnPatientInMinutes;               //subtract 5 each time per patient checks
+//        System.out.println( "Checking on patient... minutes remaining " +  maxWaitTimePerPatient );       //Print the time remaining and maximum wait time 20
+//    }
+//
+//
+//    }
+//}
+
+/*
+Do-while:
+A doctor must sign off on a patient chart at least once. Print "Doctor reviewing chart" once then stop.
+ */
+
+    public static void main(String[] args) {
+        boolean hasDoctorSignOffChart = true;
+        do {
+            System.out.println(" Doctor reviewing chart ");           //Print at least once doctor must sign off chart atleast once before sign off.
+        } while (hasDoctorSignOffChart == false);
+    }
+
+    }
