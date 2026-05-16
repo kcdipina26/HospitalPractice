@@ -540,11 +540,32 @@ Do-while:
 A doctor must sign off on a patient chart at least once. Print "Doctor reviewing chart" once then stop.
  */
 
-    public static void main(String[] args) {
-        boolean hasDoctorSignOffChart = true;
-        do {
-            System.out.println(" Doctor reviewing chart ");           //Print at least once doctor must sign off chart atleast once before sign off.
-        } while (hasDoctorSignOffChart == false);
-    }
+//    public static void main(String[] args) {
+//        boolean hasDoctorSignOffChart = true;
+//        do {
+//            System.out.println(" Doctor reviewing chart ");           //Print at least once doctor must sign off chart atleast once before sign off.
+//        } while (hasDoctorSignOffChart == false);
+//    }
+//
+//    }
+
+//For loop example: A hospital has 7 days in a week. Print each day number and how many patients were seen if each day has 15 patients:
+
+    public static void main(String[] args){                    //main method
+        int patientEachDay = 15;                               //patient per day in hospital
+        int patientTotalSeenWeekly = 0;                       //declare & initialize the patient total per week
+        for(int i = 1; i <= 7; i++){                         //loop through per day in a week
+            patientTotalSeenWeekly = i * patientEachDay;      //calculation add 15 per day as week progress.
+            System.out.println(" Day: " + i +  " patient seen " + patientTotalSeenWeekly );      //Print the day and patient no.
+        }
+
+
 
     }
+
+
+
+
+
+
+}
