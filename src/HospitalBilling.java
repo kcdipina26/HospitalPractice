@@ -94,7 +94,7 @@ Sample of method creation and example
  */
 
         public int patientTotalCollection(int[] totalPatientCollection) {
-            int[] totalCollection = new int[]{ 200, 450, 300, 150, 500 };
+            int[] totalCollection = new int[]{200, 450, 300, 150, 500};
 
             for (int i = 1; i <= 5; i++) {
                 System.out.println("Patient " + i + " Payment received is " + totalCollection);
@@ -107,20 +107,13 @@ Sample of method creation and example
             return sum;
         }
 
-          /*
-         Q12. Write a method calculateInsuranceCoverage(double bill, double coveragePercent) that returns how much insurance pays.
-         Q13. Write a method isEligibleForDiscount(int age, boolean hasInsurance) that returns true only if patient is over 60 AND has insurance.
-         Q14. Write a method getDepartmentStatus(int staffCount) that returns
-        "Understaffed" if below 30, "Adequate" if 30-50, "Fully staffed" if above 50.
-        Q15. Write a method calculateOvertimePay(int hoursWorked, double hourlyRate) that
-         calculates total pay including overtime for hours above 8.
-        Q16. Write a method getPatientPriority(int heartRate, double temperature) that
-        takes both vitals and returns "Critical", "High", "Normal" based on both conditions combined.
+        /*
+       Q12. Write a method calculateInsuranceCoverage(double bill, double coveragePercent) that returns how much insurance pays.
 
-         */
-        public double calculateInsuranceCoverage(double bill, double coveragePercent){
+       */
+        public double calculateInsuranceCoverage(double bill, double coveragePercent) {
             double insurancePays = bill * coveragePercent;
-            double totalBill =  bill - insurancePays;
+            double totalBill = bill - insurancePays;
             System.out.println("Check if you qualify for insurance ");
             System.out.print("Insurance covered $ " + insurancePays + " Off total balance $ ");
             return totalBill;
@@ -141,6 +134,47 @@ Sample of method creation and example
             }
             return hasInsurance;
         }
+
+        /*
+         Q14. Write a method getDepartmentStatus(int staffCount) that returns
+        "Understaffed" if below 30, "Adequate" if 30-50, "Fully staffed" if above 50.
+         */
+        public int getDepartmentStatus(int staffCount) {
+            if (staffCount < 30) {
+                System.out.print("Understaffed staff count: ");
+            } else if (staffCount <= 50) {
+                System.out.print("Adequate staff count: ");
+            } else if (staffCount > 50) {
+                System.out.print("Fully staffed count: ");
+            } else {
+
+            }
+           return staffCount;
+        }
+        /*
+         Q15. Write a method calculateOvertimePay(int hoursWorked, double hourlyRate) that
+         calculates total pay including overtime for hours above 8.
+         */
+        public double calculateOvertimePay(int hoursWorked, double hourlyRate){
+            final double OVER_TIME_RATE = 1.5;
+            final double REGULAR_HOURS = 8;
+            double regularPay = hoursWorked * hourlyRate;
+            double overTimePay =+ regularPay + (hoursWorked - REGULAR_HOURS) * (hourlyRate * OVER_TIME_RATE)  ;
+
+            if (hoursWorked <= 8) {
+                return regularPay;
+            } else {
+                return overTimePay;
+            }
+
+        }
+
+
+        /*
+         Q16. Write a method getPatientPriority(int heartRate, double temperature) that
+        takes both vitals and returns "Critical", "High", "Normal" based on both conditions combined.
+         */
+        
         public static void main(String[] args) {
             HospitalBilling billing = new HospitalBilling();      //calling the method
 //            System.out.println(billing.isSeniorPatient(70));
@@ -150,8 +184,9 @@ Sample of method creation and example
 //            System.out.println(billing.calculateFinalBill(1000.00, true, true));
 //            //System.out.println(billing.patientTotalCollection(200));
             System.out.println(billing.calculateInsuranceCoverage(300.00, 0.20));
-            System.out.println(billing.isEligibleForDiscount(67,false));
-
+            System.out.println(billing.isEligibleForDiscount(67,true));
+            System.out.println(billing.getDepartmentStatus(51));
+            System.out.println(billing.calculateOvertimePay(12, 15));
         }
 
     }
