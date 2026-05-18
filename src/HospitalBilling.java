@@ -139,34 +139,42 @@ Sample of method creation and example
          Q14. Write a method getDepartmentStatus(int staffCount) that returns
         "Understaffed" if below 30, "Adequate" if 30-50, "Fully staffed" if above 50.
          */
-        public int getDepartmentStatus(int staffCount) {
-            if (staffCount < 30) {
-                System.out.print("Understaffed staff count: ");
-            } else if (staffCount <= 50) {
-                System.out.print("Adequate staff count: ");
-            } else if (staffCount > 50) {
-                System.out.print("Fully staffed count: ");
-            } else {
+        public String getDepartmentStatus(int staffCount) {       //public:anyone can access, String: return type, parameter integer with staffcount variable
+            if (staffCount < 30) {                               //if statement less than 30, print under staff
+                return "Understaffed";
+            } else if (staffCount <= 50) {                      // if statement less or equal to 50, print adequate
+              return "Adequate";
 
+            }else {                                           // else statement if its over 50, print fully staffed.
+                return "Fully Staffed";
             }
-           return staffCount;
-        }
+
+        }                                                   //closing braces of method
         /*
          Q15. Write a method calculateOvertimePay(int hoursWorked, double hourlyRate) that
          calculates total pay including overtime for hours above 8.
          */
-        public double calculateOvertimePay(int hoursWorked, double hourlyRate){
-            final double OVER_TIME_RATE = 1.5;
-            final double REGULAR_HOURS = 8;
-            double regularPay = hoursWorked * hourlyRate;
-            double overTimePay =+ regularPay + (hoursWorked - REGULAR_HOURS) * (hourlyRate * OVER_TIME_RATE)  ;
+        public double calculateOvertimePay(int hoursWorked, double hourlyRate){      // public method: anyone can access it, method retrun type: double, method name: calculate over time pay, parameters int hrs worked & double hourly rate
 
-            if (hoursWorked <= 8) {
-                return regularPay;
-            } else {
-                return overTimePay;
-            }
+            final double OVER_TIME_RATE = 1.5;                                       //constant variable over time date: 1.5 rate
 
+            final int REGULAR_HRS = 8;                                               //constant variable integer regular hours = 8.
+
+            double overTimeHrs = hoursWorked - REGULAR_HRS;                          //calculation  for over time hrs
+
+            double totalRegularPay = (REGULAR_HRS * hourlyRate);                    //calculation for total regular hrs worked pay
+
+            double overTimePay = totalRegularPay + (overTimeHrs * hourlyRate * OVER_TIME_RATE); //calculation for total pay if worked overtime
+
+                if(hoursWorked > REGULAR_HRS){                                      //if statement to check if worked overtime?
+
+                    return overTimePay;                                            // if worked over time calculate and print dollar amount
+
+                }else{                                                             // else no worked overtime, regular hours
+
+                    return totalRegularPay;                                      //print pay if worked regular hrs.
+
+                }
         }
 
 
@@ -174,6 +182,23 @@ Sample of method creation and example
          Q16. Write a method getPatientPriority(int heartRate, double temperature) that
         takes both vitals and returns "Critical", "High", "Normal" based on both conditions combined.
          */
+        public String getPatientPriority(int heartRate, double temperature){          //public: anyone can access it, return type: String, method name: get patient priority, parameter: int heart rate & double temperature
+
+            if(heartRate > 120 && temperature > 99.8){                                //if statement heart rate > 120 and temperature is greater than 99.8
+
+                return "Critical";                                                    //print critical if it meets condition.
+
+
+            } else if(heartRate >= 100 || heartRate <= 120 && temperature > 99.8){    //else if condition equals to or greater than 100, heart rate greater than 120, temperature greater than 99.8
+
+                return "High";                                                       // print priority high
+
+            } else {                                                                 // if heart rate is less than 100 and temperature less than 99.8
+
+                return  "Normal";                                                   // print priority normal
+            }
+
+        }
         
         public static void main(String[] args) {
             HospitalBilling billing = new HospitalBilling();      //calling the method
@@ -183,10 +208,11 @@ Sample of method creation and example
 //            System.out.println(billing.calculateBillAfterInsurance(500.00));
 //            System.out.println(billing.calculateFinalBill(1000.00, true, true));
 //            //System.out.println(billing.patientTotalCollection(200));
-            System.out.println(billing.calculateInsuranceCoverage(300.00, 0.20));
-            System.out.println(billing.isEligibleForDiscount(67,true));
-            System.out.println(billing.getDepartmentStatus(51));
-            System.out.println(billing.calculateOvertimePay(12, 15));
+           // System.out.println(billing.calculateInsuranceCoverage(300.00, 0.20));
+           // System.out.println(billing.isEligibleForDiscount(67,true));
+            System.out.println(billing.getDepartmentStatus(60));
+            System.out.println(billing.calculateOvertimePay(9, 37.5));
+            System.out.println(billing.getPatientPriority(99,98.6));
         }
 
     }
