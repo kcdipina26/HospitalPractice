@@ -107,16 +107,50 @@ Sample of method creation and example
             return sum;
         }
 
+          /*
+         Q12. Write a method calculateInsuranceCoverage(double bill, double coveragePercent) that returns how much insurance pays.
+         Q13. Write a method isEligibleForDiscount(int age, boolean hasInsurance) that returns true only if patient is over 60 AND has insurance.
+         Q14. Write a method getDepartmentStatus(int staffCount) that returns
+        "Understaffed" if below 30, "Adequate" if 30-50, "Fully staffed" if above 50.
+        Q15. Write a method calculateOvertimePay(int hoursWorked, double hourlyRate) that
+         calculates total pay including overtime for hours above 8.
+        Q16. Write a method getPatientPriority(int heartRate, double temperature) that
+        takes both vitals and returns "Critical", "High", "Normal" based on both conditions combined.
+
+         */
+        public double calculateInsuranceCoverage(double bill, double coveragePercent){
+            double insurancePays = bill * coveragePercent;
+            double totalBill =  bill - insurancePays;
+            System.out.println("Check if you qualify for insurance ");
+            System.out.print("Insurance covered $ " + insurancePays + " Off total balance $ ");
+            return totalBill;
+        }
+
+        /*
+         Q13. Write a method isEligibleForDiscount(int age, boolean hasInsurance) that returns true
+         only if patient is over 60 AND has insurance.
+         */
+        public boolean isEligibleForDiscount(int age, boolean hasInsurance) {
+
+            if (age > 60) {
+                if (hasInsurance) {
+                    System.out.println("Patient qualifies for the insurance");
+                } else {
+                    System.out.println("Patient does not qualify for the insurance");
+                }
+            }
+            return hasInsurance;
+        }
         public static void main(String[] args) {
             HospitalBilling billing = new HospitalBilling();      //calling the method
-            System.out.println(billing.isSeniorPatient(70));
-            System.out.println(billing.isSeniorPatient(65));
-            System.out.println(billing.isSeniorPatient(40));
-            System.out.println(billing.calculateBillAfterInsurance(500.00));
-            System.out.println(billing.calculateFinalBill(1000.00, true, true));
-            //System.out.println(billing.patientTotalCollection(200));
-            return;
-
+//            System.out.println(billing.isSeniorPatient(70));
+//            System.out.println(billing.isSeniorPatient(65));
+//            System.out.println(billing.isSeniorPatient(40));
+//            System.out.println(billing.calculateBillAfterInsurance(500.00));
+//            System.out.println(billing.calculateFinalBill(1000.00, true, true));
+//            //System.out.println(billing.patientTotalCollection(200));
+            System.out.println(billing.calculateInsuranceCoverage(300.00, 0.20));
+            System.out.println(billing.isEligibleForDiscount(67,false));
 
         }
 
