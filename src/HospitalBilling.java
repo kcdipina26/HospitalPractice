@@ -123,18 +123,18 @@ Sample of method creation and example
          Q13. Write a method isEligibleForDiscount(int age, boolean hasInsurance) that returns true
          only if patient is over 60 AND has insurance.
          */
-        public boolean isEligibleForDiscount(int age, boolean hasInsurance) {
+        public boolean isEligibleForDiscount(int age, boolean hasInsurance) {     //public:anyone can access it, boolean: method return type, is eligible for discount: method name, parameters age & has insurance
 
-            if (age > 60) {
-                if (hasInsurance) {
-                    System.out.println("Patient qualifies for the insurance");
-                } else {
-                    System.out.println("Patient does not qualify for the insurance");
-                }
+            if(age > 60 && hasInsurance == true){                               // FIXED: if conditional  statement to check age over 60 and has insurance only then qualify for senior discount
+
+                return true;                                                  // return true if condition met
+
+            } else {                                                      //return false if condition on age & insurance is not met
+
+                return false;                                            
             }
-            return hasInsurance;
-        }
 
+            }
         /*
          Q14. Write a method getDepartmentStatus(int staffCount) that returns
         "Understaffed" if below 30, "Adequate" if 30-50, "Fully staffed" if above 50.
@@ -189,7 +189,7 @@ Sample of method creation and example
                 return "Critical";                                                    //print critical if it meets condition.
 
 
-            } else if(heartRate >= 100 || heartRate <= 120 && temperature > 99.8){    //else if condition equals to or greater than 100, heart rate greater than 120, temperature greater than 99.8
+            } else if(heartRate>= 100 && heartRate<= 120 && temperature > 99.8) {    //FIXED: else if condition equals to or greater than 100, heart rate greater than 120, temperature greater than 99.8
 
                 return "High";                                                       // print priority high
 
@@ -209,10 +209,10 @@ Sample of method creation and example
 //            System.out.println(billing.calculateFinalBill(1000.00, true, true));
 //            //System.out.println(billing.patientTotalCollection(200));
            // System.out.println(billing.calculateInsuranceCoverage(300.00, 0.20));
-           // System.out.println(billing.isEligibleForDiscount(67,true));
-            System.out.println(billing.getDepartmentStatus(60));
-            System.out.println(billing.calculateOvertimePay(9, 37.5));
-            System.out.println(billing.getPatientPriority(99,98.6));
+            System.out.println(billing.isEligibleForDiscount(40,true));
+            //System.out.println(billing.getDepartmentStatus(60));
+           // System.out.println(billing.calculateOvertimePay(9, 37.5));
+           System.out.println(billing.getPatientPriority(100,99.9));
         }
 
     }
