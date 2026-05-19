@@ -131,7 +131,7 @@ Sample of method creation and example
 
             } else {                                                      //return false if condition on age & insurance is not met
 
-                return false;                                            
+                return false;
             }
 
             }
