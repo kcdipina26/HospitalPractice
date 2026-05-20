@@ -30,6 +30,16 @@ public class Patient{                         //create patient class
      patient2.totalBill = 56.34;
      System.out.println("Patient 2 " + " Name " +patient2.name + " Age " + patient2.age + " BloodType: " + patient2.bloodType + " Has Insurance: " + patient2.hasInsurance + " Total Bill : $"+ patient2.totalBill);
 
+
+     Patient patient3 = new Patient();  //created third patient object
+     patient3.name = "John";
+     patient3.age = 46;
+     patient3.bloodType = "B+";
+     patient3.hasInsurance = true;
+     patient3.totalBill = 220.00;
+     System.out.println("Patient 3" + " Name " + patient3.name + " Age " + patient3.age + " Patient Blood type " + patient3.bloodType + " Has Insurance: " + patient3.hasInsurance + " Total Bill : $" + patient3.totalBill);
+
+
  }
 
 
