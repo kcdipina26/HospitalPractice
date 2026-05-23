@@ -7,11 +7,11 @@ Then in main create 2 patient objects with different values and print all their 
 
 
 public class Patient{                         //create patient class
- String name;                                 //added fields or attributes to the blueprint of patient class
- int age;
- String bloodType;
- boolean hasInsurance;
- double totalBill;
+ private String name;                        //encapsulated the fields & added fields or attributes to the blueprint of patient class
+ private int age;
+ private String bloodType;
+ private boolean hasInsurance;
+ private double totalBill;
 
  public Patient(){                 //This is first constructor for 3 hand-written patient objects
 
@@ -28,6 +28,26 @@ public Patient(String name, int age, String bloodType, boolean hasInsurance, dou
 
 }
 
+//Writing getters for each fields same with UpperCamelCasing:  name, age, bloodType, hasInsurance, totalbill
+    public String getName(){
+     return name;
+    }
+
+    public int getAge(){
+     return age;
+    }
+
+    public String getBloodType(){
+     return bloodType;
+    }
+
+    public boolean getHasInsurance(){
+     return hasInsurance;
+    }
+
+    public double getTotalBill(){
+     return totalBill;
+    }
 
 //Main method
  public static void main(String[] args){
