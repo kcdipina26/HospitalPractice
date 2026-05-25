@@ -49,6 +49,36 @@ public Patient(String name, int age, String bloodType, boolean hasInsurance, dou
      return totalBill;
     }
 
+  //Setters for the patient so no one can change it into wrong data type & values.
+
+  public void setName(String name){
+     //Setting a logical branching so its strictly name and not characters or numbers
+      this.name = name;
+
+  }
+
+  public void setAge(int age){
+     //Setting a logical branching for age to avoid negative or unrealistic values
+      if(age > 0 && age < 130){
+          this.age = age;
+      }
+  }
+
+  public void setBloodType(String[] bloodType){
+//    //set bloodtype as a collection of array it can only be those variables.
+//      String[] bloodType = {"A+", "A-", "AB+", "AB-", "O+", "O-"};
+//      this.bloodType = bloodtype;
+  }
+
+  public void setHasInsurance(boolean hasInsurance){
+     this.hasInsurance = hasInsurance;
+  }
+
+  public void setTotalBill(double totalBill){
+     if(totalBill > 0.00){
+         this.totalBill = totalBill;
+     }
+  }
 //Main method
  public static void main(String[] args){
      Patient patient1 = new Patient();              //created an object called patient1
