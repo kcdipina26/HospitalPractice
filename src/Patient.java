@@ -64,10 +64,10 @@ public Patient(String name, int age, String bloodType, boolean hasInsurance, dou
       }
   }
 
-  public void setBloodType(String[] bloodType){
-//    //set bloodtype as a collection of array it can only be those variables.
-//      String[] bloodType = {"A+", "A-", "AB+", "AB-", "O+", "O-"};
-//      this.bloodType = bloodtype;
+  public void setBloodType(String bloodType){
+    //set bloodtype as a collection of array it can only be those variables.
+    //check if blood type exist in the valid arrays
+     this.bloodType = bloodType;
   }
 
   public void setHasInsurance(boolean hasInsurance){
@@ -82,11 +82,11 @@ public Patient(String name, int age, String bloodType, boolean hasInsurance, dou
 //Main method
  public static void main(String[] args){
      Patient patient1 = new Patient();              //created an object called patient1
-     patient1.name = "Deepika";                     //filled out all the necessary fields for patient1 object
-     patient1.age = 30;
-     patient1.bloodType = "A+";
-     patient1.hasInsurance = true;
-     patient1.totalBill = 210.00;
+     patient1.setName("Deepika");                    //filled out all the necessary fields for patient1 object
+     patient1.setAge(30);
+     patient1.setBloodType("A+");
+     patient1.setHasInsurance(true);
+     patient1.setTotalBill(230.98);
      System.out.println( "Patient 1 "+" Name " + patient1.name + " Age " + patient1.age + " Patient Blood type: " + patient1.bloodType + " Has Insurance: " + patient1.hasInsurance + " Total Bill : $" + patient1.totalBill);
 
      Patient patient2 = new Patient();                  //created second object called patient 2
