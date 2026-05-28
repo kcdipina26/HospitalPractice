@@ -67,6 +67,7 @@ public Patient(String name, int age, String bloodType, boolean hasInsurance, dou
   public void setBloodType(String bloodType){
     //set bloodtype as a collection of array it can only be those variables.
     //check if blood type exist in the valid arrays
+      String[] bloodGroup = new String[] {"A+", "A-", "AB+", "AB-", "O-", "O+"};
      this.bloodType = bloodType;
   }
 
@@ -107,6 +108,7 @@ public Patient(String name, int age, String bloodType, boolean hasInsurance, dou
      System.out.println("Patient 3 " + " Name " + patient3.name + " Age " + patient3.age + " Patient Blood type " + patient3.bloodType + " Has Insurance: " + patient3.hasInsurance + " Total Bill : $" + patient3.totalBill);
 
 //Creating object constructor in use helps create object faster in a real application scenario
+//Setter and Getter
      Patient patient4 = new Patient("Diva", 19, "A+", true, 120.67); //patient 4
      Patient patient5 = new Patient("Ramesh", 38, "B+", false, 390.77); //patient 5
      Patient patient6 = new Patient("Dil", 48, "A+", true, 778.90);  //patient 6
