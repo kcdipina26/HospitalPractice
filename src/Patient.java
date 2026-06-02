@@ -94,8 +94,9 @@ public Patient(String name, int age, String bloodType, boolean hasInsurance, dou
      patient1.setTotalBill(230.98);
      System.out.println( "Patient 1 "+" Name " + patient1.getName() + " Age " + patient1.getAge() + " Patient Blood type: " + patient1.getBloodType() + " Has Insurance: " + patient1.getHasInsurance() + " Total Bill : $" + patient1.getTotalBill());
 
-    /* Patient patient2 = new Patient();                  //created second object called patient 2 without using getters and setters , constructor to see the difference
-     patient2.name = "Dipina";                         //filled out all the necessary fields for patient 2 and printed it
+    /*
+    Patient patient2 = new Patient();                  created second object called patient 2 without using getters and setters , constructor to see the difference
+     patient2.name = "Dipina";                         filled out all the necessary fields for patient 2 and printed it
      patient2.age = 56;
      patient2.bloodType = "B+";
      patient2.hasInsurance = false;
