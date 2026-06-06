@@ -1,16 +1,17 @@
 /*
-This java file consist of learning the 1st principles of OOPS. Create a new file called Patient.java with these fields
+This java file consist of learning the 1st principles of OOPS.
+ Create a new file called Patient.java with these fields
 - name (String), age(int), bloodType(String), hasInsurance(boolean), totalBill(double)
 Then in main create 2 patient objects with different values and print all their details.
  */
 
 public  class Patient {                         //create patient class
 
-    public String name;                        //encapsulated the fields & added fields or attributes to the blueprint of patient class
-    public int age;
-    public String bloodType;
-    public boolean hasInsurance;
-    public double totalBill;
+    private String name;                        //encapsulated the fields & added fields or attributes to the blueprint of patient class
+    private int age;
+    private String bloodType;
+    private boolean hasInsurance;
+    private double totalBill;
 
     public Patient() {                 //This is first constructor for 3 hand-written patient objects
 
@@ -27,7 +28,7 @@ public  class Patient {                         //create patient class
 
     }
 
-    //Writing getters for each fields same with UpperCamelCasing:  name, age, bloodType, hasInsurance, totalbill
+    //Writing getters for each fields same with get in front as method names:  name, age, bloodType, hasInsurance, totalbill
     public String getName() {
         return name;
     }
