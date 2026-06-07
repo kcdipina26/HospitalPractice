@@ -86,15 +86,23 @@ public  class Patient {                         //create patient class
         }
     }
 
+    //To string method
+
+    public String toString() {
+        return this.name + " " + this.age + " " + this.bloodType + " " + this.hasInsurance + " " + this.totalBill;
+
+    }
+}
+
     //Main method
-    public static void main(String[] args) {
-        Patient patient1 = new Patient();              //created an object called patient1
-        patient1.setName("Deepika");                    //filled out all the necessary fields for patient1 object
-        patient1.setAge(30);
-        patient1.setBloodType("A+");
-        patient1.setHasInsurance(true);
-        patient1.setTotalBill(230.98);
-        System.out.println("Patient 1 " + " Name " + patient1.getName() + " Age " + patient1.getAge() + " Patient Blood type: " + patient1.getBloodType() + " Has Insurance: " + patient1.getHasInsurance() + " Total Bill : $" + patient1.getTotalBill());
+//    public static void main(String[] args) {
+//        Patient patient1 = new Patient();              //created an object called patient1
+//        patient1.setName("Deepika");                    //filled out all the necessary fields for patient1 object
+//        patient1.setAge(30);
+//        patient1.setBloodType("A+");
+//        patient1.setHasInsurance(true);
+//        patient1.setTotalBill(230.98);
+//        System.out.println("Patient 1 " + " Name " + patient1.getName() + " Age " + patient1.getAge() + " Patient Blood type: " + patient1.getBloodType() + " Has Insurance: " + patient1.getHasInsurance() + " Total Bill : $" + patient1.getTotalBill());
 
     /*
     Patient patient2 = new Patient();                  created second object called patient 2 without using getters and setters , constructor to see the difference
@@ -133,19 +141,21 @@ public  class Patient {                         //create patient class
 //     System.out.println("Patient 3" + " Name " + patient3.getName() + " Age " + patient3.getAge() + " Patient Blood Type " + patient3.getBloodType() + " Has Insurance: " + patient3.getHasInsurance() + " Total Bill: $ " + patient3.getTotalBill());
 ////Creating object constructor in use helps create object faster in a real application scenario
 ////Setter and Getter
-        Patient patient4 = new Patient("Diva", 19, "A+", true, 120.67); //patient 4
-        Patient patient5 = new Patient("Ramesh", 38, "B+", false, 390.77); //patient 5
-        Patient patient6 = new Patient("Dil", 48, "A+", true, 778.90);  //patient 6
-        Patient patient7 = new Patient("Debaki", 67, "A+", false, 450.66); //patient 7
-        System.out.println("Patient 4 " + " Name " + patient4.getName() + " Age " + patient4.getAge() + " Patient Blood type " + patient4.getBloodType() + " Has Insurance: " + patient4.getHasInsurance() + " Total Bill : $" + patient4.getTotalBill());
-        System.out.println("Patient 5 " + " Name " + patient5.getName() + " Age " + patient5.getAge() + " Patient Blood type " + patient5.getBloodType() + " Has Insurance: " + patient5.getHasInsurance() + " Total Bill : $" + patient5.getTotalBill());
-        System.out.println("Patient 6 " + " Name " + patient6.getName() + " Age " + patient6.getAge() + " Patient Blood type " + patient6.getBloodType() + " Has Insurance: " + patient6.getHasInsurance() + " Total Bill : $" + patient6.getTotalBill());
-        System.out.println("Patient 7 " + " Name " + patient7.getName() + " Age " + patient7.getAge() + " Patient Blood type " + patient7.getBloodType() + " Has Insurance: " + patient7.getHasInsurance() + " Total Bill : $" + patient7.getTotalBill());
+//        Patient patient4 = new Patient("Diva", 19, "A+", true, 120.67); //patient 4
+//        Patient patient5 = new Patient("Ramesh", 38, "B+", false, 390.77); //patient 5
+//        Patient patient6 = new Patient("Dil", 48, "A+", true, 778.90);  //patient 6
+//        Patient patient7 = new Patient("Debaki", 67, "A+", false, 450.66); //patient 7
+//        System.out.println("Patient 4 " + " Name " + patient4.getName() + " Age " + patient4.getAge() + " Patient Blood type " + patient4.getBloodType() + " Has Insurance: " + patient4.getHasInsurance() + " Total Bill : $" + patient4.getTotalBill());
+//        System.out.println("Patient 5 " + " Name " + patient5.getName() + " Age " + patient5.getAge() + " Patient Blood type " + patient5.getBloodType() + " Has Insurance: " + patient5.getHasInsurance() + " Total Bill : $" + patient5.getTotalBill());
+//        System.out.println("Patient 6 " + " Name " + patient6.getName() + " Age " + patient6.getAge() + " Patient Blood type " + patient6.getBloodType() + " Has Insurance: " + patient6.getHasInsurance() + " Total Bill : $" + patient6.getTotalBill());
+//        System.out.println("Patient 7 " + " Name " + patient7.getName() + " Age " + patient7.getAge() + " Patient Blood type " + patient7.getBloodType() + " Has Insurance: " + patient7.getHasInsurance() + " Total Bill : $" + patient7.getTotalBill());
+//
 
 
-    }
 
 
-}
+
+
+
 
 

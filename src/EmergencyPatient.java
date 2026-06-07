@@ -86,6 +86,13 @@ public class EmergencyPatient extends Patient {            //Emergency Patient I
         }
     }
 
+    //Adding override annotation to override patient class /parent fields.
+    ///We are using getName(), getAge(), getBloodType(), getHasInsurance(), getTotalBill() getter from the parent class patient as the fields in the parent class
+    // (name, age, bloodtype, hasinsurance, totalbill) are private but the method is public for this very reason so inheritance can utilize it.
+   @Override
+    public String toString(){
+        return this.getName() + " " + this.getAge() + " " + this.getBloodType() + " " + this.getHasInsurance() + " " + this.getTotalBill() + " " + this.emergencyLevel + " " + this.ptBodyTemp + " " + this.ptBloodPressure + " " + this.ptLabResults;
+    }
 
 }
 
