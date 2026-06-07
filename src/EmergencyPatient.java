@@ -4,15 +4,17 @@
 public class EmergencyPatient extends Patient {            //Emergency Patient Inherits everything from Patient automatically.
     //Therefore name, age, Bloodtype, hasInsurance, totalBill all exist already no need to write them as OOP principle is reusability
     private String emergencyLevel;
-   private double ptBodyTemp;
+    private double ptBodyTemp;
     private String ptBloodPressure;
     private double ptLabResults;
 
 
     //Build the constructor for the emergency patient and also add patient class parameters so super can use it
     public EmergencyPatient(String name, int age, String bloodType, boolean hasInsurance, double totalBill, String emergencyLevel, double ptBodyTemp, String ptBloodPressure, double ptLabResults) {
+
         //Calling the super from parent class,
         super(name, age, bloodType, hasInsurance, totalBill);
+
         //Defining the constructor the Emergency patient
         this.emergencyLevel = emergencyLevel;
         this.ptBodyTemp = ptBodyTemp;
@@ -23,6 +25,8 @@ public class EmergencyPatient extends Patient {            //Emergency Patient I
 
 
     //Setting up getters & setters for the emergency patient class child of Patient its parent class
+
+    //Getters to view the information on emergency patient in main method this is why its public (Visibility)
 
     public String getEmergencyLevel() {
         return emergencyLevel;
@@ -42,7 +46,7 @@ public class EmergencyPatient extends Patient {            //Emergency Patient I
 
     }
 
-    //Setters for the patient and making sure the values are correct and not just any values taken into application.
+    //Setters for the patient and making sure the values are correct and not just any values taken into application / to update.
 
     public void setEmergencyLevel(String emergencyLevel) {
         //In a real hospital setting a patient critical category can be defined as High, Medium, Low based on this care team decides patient health care plan

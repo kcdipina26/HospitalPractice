@@ -13,10 +13,10 @@ public  class Patient {                         //create patient class
     private boolean hasInsurance;
     private double totalBill;
 
-    public Patient() {                 //This is first constructor for 3 hand-written patient objects
-
-
-    }
+//    public Patient() {                 //This is first empty constructor for 3 hand-written patient objects
+//
+//
+//    }
 
     //This is the constructor for new objects to be built and avoid hand typing for individual patient
     public Patient(String name, int age, String bloodType, boolean hasInsurance, double totalBill) {
@@ -86,7 +86,7 @@ public  class Patient {                         //create patient class
         }
     }
 
-    //To string method
+    //To string method to display the text itself.
 
     public String toString() {
         return this.name + " " + this.age + " " + this.bloodType + " " + this.hasInsurance + " " + this.totalBill;
@@ -96,7 +96,7 @@ public  class Patient {                         //create patient class
 
     //Main method
 //    public static void main(String[] args) {
-//        Patient patient1 = new Patient();              //created an object called patient1
+//        Patient patient1 = new Patient();              //created an object called patient1 blank field therefore manually enter all state
 //        patient1.setName("Deepika");                    //filled out all the necessary fields for patient1 object
 //        patient1.setAge(30);
 //        patient1.setBloodType("A+");
