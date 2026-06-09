@@ -95,8 +95,20 @@ public  class Patient {                         //create patient class
 
     //This is a real method of calculating bill of regular patient
     //Todo need to add more conditions for patient with insurance and meaningful message
-    public double generateBill() {
+    public double generateBill(double insuranceCoverage, boolean hasInsurance) {
+        //Calculate the total bill of regular patient check if they have insurance and if there do then use it
+        final double INSURANCE_RATE = 0.40;
+        if(hasInsurance == false){
+            totalBill = totalBill;
+            System.out.println("Patient total bill: " + totalBill);
+        }else if (hasInsurance == true) {
+            totalBill = INSURANCE_RATE * totalBill;
+            System.out.println("Patient total bill: " + totalBill);
+        } else {
+
+        }
         return totalBill;
+
     }
 }
 

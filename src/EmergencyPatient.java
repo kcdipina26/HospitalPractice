@@ -104,9 +104,24 @@ public class EmergencyPatient extends Patient {            //Emergency Patient I
     Then call super.generateBill() inside EmergencyPatient's version to reuse the parent logic first before adding the emergency charges on top.
 
 
-     */
+    @Override
+    public double generateBill(double insuranceCoverage, boolean hasInsurance, double emergencyBill) {
+        //Calculate the total bill of regular patient check if they have insurance and if there do then use it
+        final double INSURANCE_RATE = 0.40;
+        if(hasInsurance == false){
+            getTotalBill() = emergencyBill;
+            System.out.println("Patient total bill: " + getTotalBill());
+        }else if (hasInsurance == true) {
+            getTotalBill() = INSURANCE_RATE * setTotalBill();
+            System.out.println("Patient total bill: " + getTotalBill());
+        } else {
 
+        }
+        return getTotalBill();
 
+    }
+*/
+    
 }
 
 
