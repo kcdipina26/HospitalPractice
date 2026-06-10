@@ -5,7 +5,7 @@ This java file consist of learning the 1st principles of OOPS.
 Then in main create 2 patient objects with different values and print all their details.
  */
 
-public  class Patient {                         //create patient class
+public abstract class Patient {                         //create patient class
 
     private String name;                        //encapsulated the fields & added fields or attributes to the blueprint of patient class
     private int age;
@@ -95,21 +95,23 @@ public  class Patient {                         //create patient class
 
     //This is a real method of calculating bill of regular patient
     //Todo need to add more conditions for patient with insurance and meaningful message
-    public double generateBill(double insuranceCoverage, boolean hasInsurance) {
+    public double generateBill(double patientBill, boolean hasInsurance) {
         //Calculate the total bill of regular patient check if they have insurance and if there do then use it
         final double INSURANCE_RATE = 0.40;
         if(hasInsurance == false){
-            totalBill = totalBill;
-            System.out.println("Patient total bill: " + totalBill);
+            patientBill = totalBill;
+            System.out.println("Patient total bill: " + patientBill);
         }else if (hasInsurance == true) {
-            totalBill = INSURANCE_RATE * totalBill;
+            patientBill = INSURANCE_RATE * totalBill;
             System.out.println("Patient total bill: " + totalBill);
         } else {
 
         }
-        return totalBill;
+        return patientBill;
 
     }
+
+    public abstract double generateEmergencyPtBill(double patientBill, boolean hasInsurance, double emergencyBill);
 }
 
 
