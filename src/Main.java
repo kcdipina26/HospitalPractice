@@ -6,16 +6,16 @@
 public class Main {
     public static void main(String[] args) {
         //Call the patient class object to test its method, create new patients
-        Patient patient22 = new Patient("Lumi", 6, "AB+", true, 234.66);
-        Patient patient4 = new Patient("Diva", 19, "A+", true, 120.67); //patient 4
-        Patient patient5 = new Patient("Ramesh", 38, "B+", false, 390.77); //patient 5
-        Patient patient6 = new Patient("Dil", 48, "A+", true, 778.90);  //patient 6
-        Patient patient7 = new Patient("Debaki", 67, "A+", false, 450.66); //patient 7
-        System.out.println(patient22);
-        System.out.println(patient4);
-        System.out.println(patient5);
-        System.out.println(patient6);
-        System.out.println(patient7);
+//        Patient patient22 = new Patient("Lumi", 6, "AB+", true, 234.66);
+//        Patient patient4 = new Patient("Diva", 19, "A+", true, 120.67); //patient 4
+//        Patient patient5 = new Patient("Ramesh", 38, "B+", false, 390.77); //patient 5
+//        Patient patient6 = new Patient("Dil", 48, "A+", true, 778.90);  //patient 6
+//        Patient patient7 = new Patient("Debaki", 67, "A+", false, 450.66); //patient 7
+//        System.out.println(patient22);
+//        System.out.println(patient4);
+//        System.out.println(patient5);
+//        System.out.println(patient6);
+//        System.out.println(patient7);
 
 
         //Emergency Patient class object creation and testing the methods.

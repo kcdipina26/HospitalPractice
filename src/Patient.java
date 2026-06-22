@@ -114,7 +114,7 @@ public abstract class Patient {                         //create patient class
     public abstract double generateEmergencyPtBill(double patientBill, boolean hasInsurance, double emergencyBill);
 }
 
-
+//To do inheritance + emergency billing - logic needs to be reviewed
 
 
 
